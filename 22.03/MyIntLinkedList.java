@@ -113,6 +113,7 @@ public class MyIntLinkedList implements MyIntList{
 	@Override
 	public String toString() {
 		String result = "";
+		Elem p = head;
 		
 		while (p != null) {
 			result += Integer.toString(p.value) + " ";
