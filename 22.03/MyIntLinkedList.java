@@ -14,7 +14,13 @@ public class MyIntLinkedList implements MyIntList{
 			throw new IndexOutOfBoundsException("Ошибка индекса");
 		}
 		
+		MyIntLinkedList elem = this.next;
 		
+		for (int k = 0; k < i; k++) {
+			elem = elem.next;
+		}
+		
+		return elem.value
 	}
 	
 	@Override
@@ -70,5 +76,7 @@ public class MyIntLinkedList implements MyIntList{
 	}
 	
 	@Override
-	public String toString()
+	public String toString() {
+		return string;
+	}
 }
