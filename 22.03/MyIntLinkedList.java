@@ -95,7 +95,9 @@ public class MyIntLinkedList implements MyIntList{
 	
 	@Override
 	public void clear() {
-		
+		head = null;
+		end = null;
+		size = 0;
 	}
 	
 	@Override
@@ -110,6 +112,13 @@ public class MyIntLinkedList implements MyIntList{
 	
 	@Override
 	public String toString() {
-		return string;
+		String result = "";
+		
+		while (p != null) {
+			result += Integer.toString(p.value) + " ";
+			p = p.next;
+		}
+		
+		return result;
 	}
 }
