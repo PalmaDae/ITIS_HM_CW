@@ -1,6 +1,7 @@
 public class MyIntLinkedList implements MyIntList{
-	private Elem head;
+	private MyIntLinkedList head;
 	private int size;
+	private int value;
 	
 	public MyIntLinkedList() {
 		this.head = null;
@@ -56,6 +57,16 @@ public class MyIntLinkedList implements MyIntList{
 	@Override
 	public void clear() {
 		
+	}
+	
+	@Override
+	public void addAll(MyIntLinkedList list) {
+		
+	}
+	
+	@Override
+	public boolean equals(MyIntLinkedList list) {
+		return info;
 	}
 	
 	@Override
