@@ -28,9 +28,10 @@ public class MyArrayList implements MyIntList{
 		array = arraySecond;
 	}
 	
+	@Override
 	public int get(int i) {
 		if (i < 0 || i >= size) {
-			throw new IllegalArgumentException("Индекс отрицательный");
+			throw new IndexOutOfBoundsException("Индекс отрицательный");
 		}
 		
 		int element = array[i];
@@ -38,9 +39,10 @@ public class MyArrayList implements MyIntList{
 		return element;
 	}
 	
+	@Override
 	public void remove(int i) {
 		if (i < 0 || i >= size) {
-			throw new IllegalArgumentException("Индекс отрицательный");
+			throw new IndexOutOfBoundsException("Индекс отрицательный");
 		}
 		
 		for (int j = i; j < size - 1; j++) {
@@ -49,6 +51,7 @@ public class MyArrayList implements MyIntList{
 		size -= 1;
 	}
 	
+	@Override
 	public void delete(int x) {
 		for (int i = 0; i < size; i++) {
             if (array[i] == x) {
@@ -58,17 +61,20 @@ public class MyArrayList implements MyIntList{
 		}
 	}
 	
+	@Override
 	public int size() {
 		return size;
 	}
 	
+	@Override
 	public void set(int x, int i) {
 		if (i < 0 || i >= size) {
-			throw new IllegalArgumentException("Индекс отрицательный");
+			throw new IndexOutOfBoundsException("Индекс отрицательный");
 		}
 		array[i] = x;
 	}
 	
+	@Override
 	public void clear() {
 		size = 0;
 	}
@@ -85,7 +91,7 @@ public class MyArrayList implements MyIntList{
 	}
 
 	@Override
-	public void addAll(MyArrayList list) {
+	public void addAll(MyIntList list) {
 		int newSize = list.size() + size;
 		
 		while (array.length < newSize) {
@@ -100,7 +106,7 @@ public class MyArrayList implements MyIntList{
 	}
 	
 	@Override
-	public boolean equals(MyArrayList list) {	
+	public boolean equals(MyIntList list) {	
 		if (size != list.size) {
 			return false;
 		}
