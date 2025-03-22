@@ -84,12 +84,30 @@ public class MyIntLinkedList implements MyIntList{
 	}
 	
 	@Override
-	public remove(int i) {
+	public void remove(int i) {
+		if (i < 0 || i >= size) {
+			throw new IndexOutOfBoundsException("Ошибка индекса");
+		}
 		
+		Elem p = head;
+		
+		for (int k = 0; k < i - 1) {
+			p = p.next;
+		}
+		
+		p.next = p.next.next;
+		
+		if (p.next == null) {
+			end = p;
+		}
+		
+		size--;
 	}
 	
 	@Override
 	public void delete(int x) {
+		Elem p = head;
+		
 		
 	}
 	
@@ -102,12 +120,33 @@ public class MyIntLinkedList implements MyIntList{
 	
 	@Override
 	public void addAll(MyIntLinkedList list) {
+		Elem p = list.head;
 		
+		while (p != null) {
+			this.add(p.value);
+			p = p.next
+		}
 	}
 	
 	@Override
 	public boolean equals(MyIntLinkedList list) {
-		return info;
+		Elem p1 = this.head;
+		Elem p2 = list.head;
+		
+		if (this.size != list.size) {
+			return false;
+		}
+		
+		while(p != null) {
+			if(p1.value != p2.value) {
+				return false;
+			}
+			
+			p1 = p1.next;
+			p2 = p2.next;
+		}
+		
+		return true;
 	}
 	
 	@Override
