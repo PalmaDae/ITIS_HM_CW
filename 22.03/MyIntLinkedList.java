@@ -33,9 +33,31 @@ public class MyIntLinkedList implements MyIntList{
 	// void addAll(MyArrayList list);
 	// boolean equals(MyArrayList list);
 	
+	@Override
 	public void add(int x) {
 		
 	}
 	
+	@Override
+	public int size() {
+		return size;
+	}
 	
+	@Override
+	public remove(int i) {
+		
+	}
+	
+	@Override
+	public void delete(int x) {
+		
+	}
+	
+	@Override
+	public void clear() {
+		
+	}
+	
+	@Override
+	public String toString()
 }
