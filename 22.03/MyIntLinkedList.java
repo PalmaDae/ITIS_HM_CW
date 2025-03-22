@@ -1,7 +1,6 @@
 public class MyIntLinkedList implements MyIntList{
-	private MyIntLinkedList head;
+	private Elem head;
 	private int size;
-	private int value;
 	
 	public MyIntLinkedList() {
 		this.head = null;
@@ -14,7 +13,7 @@ public class MyIntLinkedList implements MyIntList{
 			throw new IndexOutOfBoundsException("Ошибка индекса");
 		}
 		
-		MyIntLinkedList elem = this.next;
+		Elem elem = this.next;
 		
 		for (int k = 0; k < i; k++) {
 			elem = elem.next;
@@ -29,7 +28,7 @@ public class MyIntLinkedList implements MyIntList{
 			throw new IndexOutOfBoundsException("Ошибка индекса");
 		}
 		
-		MyIntLinkedList elem = this.next;
+		Elem elem = this.next;
 		
 		for (int k = 0; k < i; k++) {
 			elem = elem.next;
@@ -52,7 +51,7 @@ public class MyIntLinkedList implements MyIntList{
 	
 	@Override
 	public void add(int x) {
-		
+		Elem newElem = new Elem();
 	}
 	
 	@Override
