@@ -91,7 +91,7 @@ public class MyIntLinkedList implements MyIntList{
 		
 		Elem p = head;
 		
-		for (int k = 0; k < i - 1) {
+		for (int k = 0; k < i - 1; k++) {
 			p = p.next;
 		}
 		
