@@ -55,14 +55,24 @@ public class MyIntLinkedList implements MyIntList{
 	public void add(int x) {
 		Elem newElem = new Elem();
 		
-		if (head == null) {
+		// if (head == null) {
+			// head = newElem;
+		// } else {
+			// Elem p = head;
+			// while (p.next != null) {
+				// p = p.next;
+			// }
+			// p.next = newElem;
+		// }
+		
+		// size++;
+		
+		if (head = null) {
 			head = newElem;
-		} else {
-			Elem p = head;
-			while (p.next != null) {
-				p = p.next;
-			}
-			p.next = newElem;
+			end = newElem;
+		}else {
+			end.next = newElem;
+			end = newElem;
 		}
 		
 		size++;
