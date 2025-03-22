@@ -1,9 +1,11 @@
 public class MyIntLinkedList implements MyIntList{
 	private Elem head;
 	private int size;
+	private Elem end;
 	
 	public MyIntLinkedList() {
 		this.head = null;
+		this.end = null;
 		this.size = 0;
 	}
 	
@@ -52,6 +54,18 @@ public class MyIntLinkedList implements MyIntList{
 	@Override
 	public void add(int x) {
 		Elem newElem = new Elem();
+		
+		if (head == null) {
+			head = newElem;
+		} else {
+			Elem p = head;
+			while (p.next != null) {
+				p = p.next;
+			}
+			p.next = newElem;
+		}
+		
+		size++;
 	}
 	
 	@Override
