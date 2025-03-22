@@ -25,7 +25,17 @@ public class MyIntLinkedList implements MyIntList{
 	
 	@Override
 	public void set(int x, int i) {
+		if (i < 0 || i >= size) {
+			throw new IndexOutOfBoundsException("Ошибка индекса");
+		}
 		
+		MyIntLinkedList elem = this.next;
+		
+		for (int k = 0; k < i; k++) {
+			elem = elem.next;
+		}
+		
+		elem.value = x;
 	}
 	
 	// int get(int i);
