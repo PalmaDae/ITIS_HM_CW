@@ -98,7 +98,7 @@ public class MyArrayList implements MyIntList{
 			newShkaph();
 		}
 		
-		for (int i = 0; i < list.size; i++) {
+		for (int i = 0; i < list.size(); i++) {
 			array[size + i] = list.get(i);
 		}
 		
@@ -112,7 +112,7 @@ public class MyArrayList implements MyIntList{
 		}
 		
 		for (int i = 0; i < size; i++) {
-			if (array[i] != list.array[i]) {
+			if (array[i] != list.get(i)) {
 				return false;
 			}
 		}

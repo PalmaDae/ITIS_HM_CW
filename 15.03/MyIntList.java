@@ -8,6 +8,6 @@ interface MyIntList {
 	void clear();
 	String toString();
 	
-	void addAll(MyArrayList list);
-	boolean equals(MyArrayList list);
+	void addAll(MyIntList list);
+	boolean equals(MyIntList list);
 }
