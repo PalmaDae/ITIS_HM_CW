@@ -13,10 +13,6 @@ public class MyArrayList<T> implements MyList<T>{
 		// return answear;
 	// }
 	
-	public void newShkaf() {
-		
-	}
-	
 	@Override
 	public void set(int index, T element) {
 		if (index < 0 || index >= size) {
@@ -26,7 +22,22 @@ public class MyArrayList<T> implements MyList<T>{
 	
 	@Override
 	public void add(T element) {
+		if (size == array.length) {
+			newShkaph();
+		}
+		array[size] = element;
 		
+		size++;
+	}
+	
+	public void newShkaf() {
+		Object[] arraySecond = new Object[array.length * 2];
+		
+		for (int i = 0; i < array.length; i++) {
+			arraySecond[i] = array[i];
+		}
+		
+		array = arraySecond;
 	}
 	
 	@Override
