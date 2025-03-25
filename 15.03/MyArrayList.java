@@ -91,7 +91,7 @@ public class MyArrayList implements MyIntList{
 	}
 
 	@Override
-	public void addAll(MyIntList list) {
+	public void addAll(MyArrayList list) {
 		int newSize = list.size() + size;
 		
 		while (array.length < newSize) {
@@ -106,7 +106,7 @@ public class MyArrayList implements MyIntList{
 	}
 	
 	@Override
-	public boolean equals(MyIntList list) {	
+	public boolean equals(MyArrayList list) {	
 		if (size != list.size) {
 			return false;
 		}
