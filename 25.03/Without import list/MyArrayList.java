@@ -8,16 +8,24 @@ public class MyArrayList<T> implements MyList<T>{
 		size = 0;
 	}
 	
-	// @Override
-	// public T get(int index) {
-		// return answear;
-	// }
+	@Override
+	public T get(int index) {
+		if (index < 0 || index >= size) {
+			throw new IndexOutOfBoundsException("Индекс отрицательный");
+		}
+		
+		Object element = array[index];
+		
+		return element;
+	}
 	
 	@Override
 	public void set(int index, T element) {
 		if (index < 0 || index >= size) {
 			throw new IndexOutOfBoundsException("Индекс отрицательный");
 		}
+		
+		array[index] = element;
 	}
 	
 	@Override
@@ -30,7 +38,7 @@ public class MyArrayList<T> implements MyList<T>{
 		size++;
 	}
 	
-	public void newShkaf() {
+	public void newShkaph() {
 		Object[] arraySecond = new Object[array.length * 2];
 		
 		for (int i = 0; i < array.length; i++) {
@@ -66,6 +74,10 @@ public class MyArrayList<T> implements MyList<T>{
 	public String toString() {
 		String result = "";
 		
+		for (int i = 0; i < size; i++) {
+			result += array[i] + " || ";
+		}
+
 		return result;
 	}
 	
@@ -76,10 +88,24 @@ public class MyArrayList<T> implements MyList<T>{
 	
 	@Override
 	public boolean equals(MyList list) {
+		if (size != list.size) {
+			return false;
+		}
+		
+		for (int i = 0; i < size; i++) {
+			if (array[i] != list.get(i)) {
+				return false;
+			}
+		}
+		
 		return true;
 	}
 	
 	public static void main(String[] args) {
+		MyArrayList<String> list = new MyArrayList<>();
+		list.add("First message");
+		list.add("Second message");
 		
+		System.out.println(list);
 	}
 }

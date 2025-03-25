@@ -1,5 +1,5 @@
 interface MyList<T>{
-	// T get(int index);
+	T get(int index);
 	void set(int index, T element);
 	void add(T element);
 	int size();
