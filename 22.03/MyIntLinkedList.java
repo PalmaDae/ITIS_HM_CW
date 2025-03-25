@@ -107,8 +107,19 @@ public class MyIntLinkedList implements MyIntList{
 	@Override
 	public void delete(int x) {
 		Elem p = head;
+		Elem perem = head.next;
 		
+		while (perem != null) {
+			if (perem.value == x) {
+				p.next = perem.next;
+				size--;
+				return;
+			}
+			p = perem;
+			perem = perem.next;
+		}
 		
+		end = head;
 	}
 	
 	@Override
