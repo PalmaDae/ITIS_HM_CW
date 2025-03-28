@@ -8,15 +8,14 @@ public class MyArrayList<T> implements MyList<T>{
 		size = 0;
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public T get(int index) {
 		if (index < 0 || index >= size) {
 			throw new IndexOutOfBoundsException("Индекс отрицательный");
 		}
 		
-		Object element = array[index];
-		
-		return element;
+		return (T) array[index];
 	}
 	
 	@Override
@@ -58,11 +57,21 @@ public class MyArrayList<T> implements MyList<T>{
 		if (index < 0 || index >= size) {
 			throw new IndexOutOfBoundsException("Индекс отрицательный");
 		}
+		
+		for (int j = index; j < size - 1; j++) {
+            array[j] = array[j + 1];
+        }
+		size -= 1;
 	}
 	
 	@Override
 	public void delete(T element) {
-		
+		for (int i = 0; i < size; i++) {
+			if (array[i] == element) {
+				remove(i);
+				return;
+			}
+		}
 	}
 	
 	@Override
@@ -82,18 +91,20 @@ public class MyArrayList<T> implements MyList<T>{
 	}
 	
 	@Override
-	public void addAll(MyList list) {
-		
-	}
+	public void addAll(MyList<T> list) {
+		for (int i = 0; i < list.size(); i++) {
+			this.add(list.get(i));
+		}
+	}	
 	
 	@Override
-	public boolean equals(MyList list) {
-		if (size != list.size) {
+	public boolean equals(MyList<T> list) {
+		if (size != list.size()) {
 			return false;
 		}
 		
 		for (int i = 0; i < size; i++) {
-			if (array[i] != list.get(i)) {
+			if (!array[i].equals(list.get(i))) {
 				return false;
 			}
 		}
