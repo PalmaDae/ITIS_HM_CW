@@ -11,7 +11,6 @@ public class MyArrayList<T> implements List<T>{
 	}
 	
 	@SuppressWarnings("unchecked")
-	
 	public T get(int index) {
 		if (index < 0 || index >= size) {
 			throw new IndexOutOfBoundsException("Индекс отрицательный");
@@ -24,8 +23,8 @@ public class MyArrayList<T> implements List<T>{
 		return null;
 	}
 	
-	public boolean add(T e) {
-		array[size] = e;
+	public boolean add(T element) {
+		array[size] = element;
 		size++;
 		return true;
 	}
@@ -50,6 +49,15 @@ public class MyArrayList<T> implements List<T>{
 	}
 	
 	public T remove(int index) {
+		if (index < 0 || index >= size) {
+			throw new IndexOutOfBoundsException("Индекс отрицательный");
+		}
+		
+		for (int j = index; j < size - 1; j++) {
+            array[j] = array[j + 1];
+        }
+		size -= 1;
+		
 		return null;
 	}
 	
@@ -85,7 +93,7 @@ public class MyArrayList<T> implements List<T>{
 	public boolean addAll(Collection<? extends T> c) {
 		boolean f = false;
 		for (T x : c) {
-			f = f | add(c);
+			f |= add(x);
 		}
 		return f;
 	}
@@ -107,11 +115,6 @@ public class MyArrayList<T> implements List<T>{
 		}
 		
 		return true;
-	}
-	
-	@Override
-	public List<T> subList(int fromIndex, int toIndex) {
-		
 	}
 	
 	@Override
@@ -148,9 +151,11 @@ public class MyArrayList<T> implements List<T>{
 	public boolean remove(Object o) {
 		return false;
 	}
+	
 	public boolean removeAll(Collection<?> c) {
 		return false;
 	}
+	
 	public boolean retainAll(Collection<?> c) {
 		return false;
 	}
@@ -161,5 +166,48 @@ public class MyArrayList<T> implements List<T>{
 	
 	public <E> E[] toArray(E[] a) {
 		return null;
+	}
+	
+	@Override
+	public MyArrayList<T> subList(int fromIndex, int toIndex) {
+		if (fromIndex < 0 || toIndex >= size) {
+			throw new IndexOutOfBoundsException("Индекс не подходит");
+		}
+		
+		MyArrayList<T> sublist = new MyArrayList<>();
+		
+		for (int i = fromIndex; i < toIndex; i++) {
+			sublist.add(get(i));
+		}
+		
+		return sublist;
+	}
+	
+	public static void main(String[] args) {
+		MyArrayList<Integer> list = new MyArrayList<>();
+		
+		for (int i = 0; i < 16; i++) {
+			list.add(i);
+			// System.out.println(list);
+		}
+		
+		System.out.println(list);
+		
+		MyArrayList<Integer> listSecond = list.subList(3, 12);
+		
+		System.out.println("-");
+		
+		System.out.println(listSecond);
+		
+		System.out.println("-");
+		
+		listSecond.delete(8);
+		
+		System.out.println(list);
+		
+		System.out.println("-");
+		
+		System.out.println(listSecond);
+		
 	}
 }
