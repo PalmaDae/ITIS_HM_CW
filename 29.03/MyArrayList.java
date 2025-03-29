@@ -20,13 +20,8 @@ public class MyArrayList<T> implements List<T>{
 		return (T) array[index];
 	}
 	
-	
-	public void set(int index, T element) {
-		if (index < 0 || index >= size) {
-			throw new IndexOutOfBoundsException("Индекс отрицательный");
-		}
-		
-		array[index] = element;
+	public T set(int index, T element) {
+		return null;
 	}
 	
 	public boolean add(T e) {
@@ -54,18 +49,9 @@ public class MyArrayList<T> implements List<T>{
 		return size;
 	}
 	
-	
-	public void remove(int index) {
-		if (index < 0 || index >= size) {
-			throw new IndexOutOfBoundsException("Индекс отрицательный");
-		}
-		
-		for (int j = index; j < size - 1; j++) {
-            array[j] = array[j + 1];
-        }
-		size -= 1;
+	public T remove(int index) {
+		return null;
 	}
-	
 	
 	public void delete(T element) {
 		for (int i = 0; i < size; i++) {
@@ -76,6 +62,9 @@ public class MyArrayList<T> implements List<T>{
 		}
 	}
 	
+	public int lastIndexOf(Object x) {
+		return 0;
+	}
 	
 	public void clear() {
 		size = 0;
