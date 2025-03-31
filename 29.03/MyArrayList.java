@@ -10,6 +10,10 @@ public class MyArrayList<T> implements List<T>{
 		size = 0;
 	}
 	
+	public MyArrayList() {
+		
+	}
+	
 	@SuppressWarnings("unchecked")
 	public T get(int index) {
 		if (index < 0 || index >= size) {
@@ -20,10 +24,20 @@ public class MyArrayList<T> implements List<T>{
 	}
 	
 	public T set(int index, T element) {
+		if (index < 0 || index >= size) {
+			throw new IndexOutOfBoundsException("Индекс отрицательный");
+		}
+		
+		array[index] = element;
+		
 		return null;
 	}
 	
-	public boolean add(T element) {
+	public boolean add(T element) {	
+		if (size == array.length) {
+			newShkaph();
+		}
+	
 		array[size] = element;
 		size++;
 		return true;
