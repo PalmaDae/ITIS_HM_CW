@@ -99,14 +99,13 @@ public class MyLinkedList<T> implements List<T> {
 
     @Override
     public String toString() {
-        StringBuilder result = new StringBuilder();
+        String result = "";
         Elem<T> p = head;
         while (p != null) {
-            result.append(p.value).append(" -> ");
+            result += p.value + " ";
             p = p.next;
         }
-        result.append("null");
-        return result.toString();
+        return result;
     }
 
     @Override
