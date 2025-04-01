@@ -10,10 +10,6 @@ public class MyArrayList<T> implements List<T>{
 		size = 0;
 	}
 	
-	public MyArrayList() {
-		
-	}
-	
 	@SuppressWarnings("unchecked")
 	public T get(int index) {
 		if (index < 0 || index >= size) {
