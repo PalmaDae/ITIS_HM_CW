@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class MyIntegerComparator implements Comparator<Integer>{
-	
 	@Override
 	public int compare(Integer firstNumber, Integer secondNumber) {
 		int firstCnt = 0;
@@ -21,18 +20,11 @@ public class MyIntegerComparator implements Comparator<Integer>{
 		}
 		
 		if (firstCnt > secondCnt) {
-			return firstNumber;
+			return 1;
 		}else if (secondCnt > firstCnt) {
-			return secondNumber;
+			return -1;
 		} else {
 			return 0;
 		}
-	}
-	
-	public static void main(String[] args) {
-		Integer first = 123;
-		Integer second = 32133;
-		
-		System.out.println(compare(first, second));
 	}
 }
