@@ -4,6 +4,11 @@ public class MyIntegerComparator implements Comparator<Integer>{
 	public int count(int number) {
 		int cnt = 0;
 		int absNumber = Math.abs(number);
+		
+		// if (number < 0) {
+			// number += -1;
+		// }
+		
 		while (absNumber > 0) {
 			absNumber /= 10;
 			cnt++;

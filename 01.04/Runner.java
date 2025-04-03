@@ -36,6 +36,11 @@ public class Runner {
 		
 		System.out.println("---");
 		
+		ArrayList<Stundet> array4 = new ArrayList<>();
+		Comparator myFourthComparator = new MyAverageScoreComparator();
+		
+		System.out.println("---");
+		
 		
 	}
 }
