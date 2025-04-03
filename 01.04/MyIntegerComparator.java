@@ -1,23 +1,21 @@
 import java.util.*;
 
 public class MyIntegerComparator implements Comparator<Integer>{
+	public int count(int number) {
+		int cnt = 0;
+		int absNumber = Math.abs(number);
+		while (absNumber > 0) {
+			absNumber /= 10;
+			cnt++;
+		}
+		
+		return cnt;
+	}
+	
 	@Override
 	public int compare(Integer firstNumber, Integer secondNumber) {
-		int firstCnt = 0;
-		int secondCnt = 0;
-		int absFirstNumber = Math.abs(firstNumber);
-		int absSecondNumber = Math.abs(secondNumber);
-		
-		
-		while (absFirstNumber > 0) {
-			absFirstNumber /= 10;
-			firstCnt++;
-		}
-		
-		while (absSecondNumber > 0) {
-			absSecondNumber /= 10;
-			secondCnt++;
-		}
+		int firstCnt = count(firstNumber);
+		int secondCnt = count(secondNumber);
 		
 		if (firstCnt > secondCnt) {
 			return 1;
