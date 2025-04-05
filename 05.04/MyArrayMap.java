@@ -37,6 +37,7 @@ import java.util.*;
 class MyEntry {
 	Object key;
 	Object value;
+	
 	public MyEntry(Object key, Object value) {
 		this.key = key;
 		this.value = value;
@@ -51,6 +52,7 @@ class MyEntry {
 public class MyArrayMap<K,V> implements Map<K,V>{
 	int capacity = 100;
 	int size = 0;
+	MyEntry[] entries = new MyEntry[capacity]; // Хранит сами значения, которые нам нужны, то есть key и value.
 	
 	public MyArrayMap() {
 		
@@ -85,44 +87,51 @@ public class MyArrayMap<K,V> implements Map<K,V>{
 	}
 	
 	@Override
-	public V put(K key, V value) {
+	public V put(K key, V value) { //Вторая часть понимания
 		if (key == null) {
 			return null;
 		}
 		
-		int index = find(key);
+		int index = find(key); //Индекс кея, который мы нашли позднее(ранее???) в find.
 		
-		if (index == -1) {
-			MyEntry entry = new MyEntry(key, value);
+		if (index == -1) { // Если мы такой key не нашли, значит он у нас будет новым, то есть добавляем новое значение в массив.
+			MyEntry entry = new MyEntry(key, value); //Создаём, чтобы мы могли добавить в наш массив объект, который хранит и вэлью и кей.
 			
-			entries[size] = entry;
+			entries[size] = entry; //Присваиваем последнему значению значение и ключ, который нам нужен.
 			
 			size++;
 			return null;
-		} else {
-			MyEntry entry = entries[index];
-			V oldValue = (V) entry.value;
-			entry.value = value;
+			
+		} else { //Мы нашли этот key, 
+			MyEntry entry = entries[index];  //Создаём объект, туда кидает данные, который мы нашли по ключу в find
+			
+			V oldValue = (V) entry.value; //Сохраняем вэлью, который был в нашем массиве в отдельную переменную.
+			
+			entry.value = value; //В наш объект закидываем значение, которое мы засунули в put
+			
 			return oldValue;
 		}
 	}
 	
-	public int find(K key) {
-		for (int i = 0; i < size; i++) {
-			if (entries[i].key.equals(key)) {
+	public int find(K key) { //Первая часть понимания
+		for (int i = 0; i < size; i++) { //Проходим по массиву наших значений
+			if (entries[i].key.equals(key)) { //Если мы нашли key, который мы вбили в find, то он вернёт на каком месте он стоит.
 				return i;
 			}
 		}
 		
-		return -1;
+		return -1; //Иначе, он говорит нет, не получилось, поэтому возвращаем отрицание
 	}
 	
-	public V get(Object key) {
+	@Override
+	public V get(Object key) { //Возвращает вэлью, по нашему ключу. Третья часть
 		int index = find((K) key);
-		if (index == -1) {
-			return
+		
+		if (index == -1) { //Если индекс отрицательный, значит такого ключа нет, нам и нечего возвращать.
+			return null;
+		
 		} else {
-			
+			return (V) entries[index].value; //Возвращает вэлью по индексу нашего ключа
 		}
 	}
 	

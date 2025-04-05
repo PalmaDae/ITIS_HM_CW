@@ -1,6 +1,8 @@
 import java.util.*;
 
 public class MyTreeMap<K,V> implements Map<K,V>{
+	Comparator<> myComparator = new TreeComparator();
+	
 	public MyTreeMap() {
 		
 	}
