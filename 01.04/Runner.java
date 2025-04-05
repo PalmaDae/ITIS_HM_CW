@@ -59,7 +59,7 @@ public class Runner {
                 array5.add(student);
             }
         } catch (IOException e) {
-            System.out.println("Ошибка при чтении файла: " + e.getMessage());
+            System.out.println("");
         }
 		
 		Collections.sort(array5, myFourthComparator);
