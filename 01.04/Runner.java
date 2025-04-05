@@ -45,15 +45,15 @@ public class Runner {
             String line;
             
             while ((line = reader.readLine()) != null) {
-                String[] parts = line.split("#");
-                String lastName = parts[0];
-                String firstName = parts[1];
-                String city = parts[2];
-                int year = Integer.parseInt(parts[3]);
-                int matAnal = Integer.parseInt(parts[4]);
-                int diskra = Integer.parseInt(parts[5]);
-                int alGem = Integer.parseInt(parts[6]);
-                int infa = Integer.parseInt(parts[7]);
+                String[] aga = line.split("#");
+                String lastName = aga[0];
+                String firstName = aga[1];
+                String city = aga[2];
+                int year = Integer.parseInt(aga[3]);
+                int matAnal = Integer.parseInt(aga[4]);
+                int diskra = Integer.parseInt(aga[5]);
+                int alGem = Integer.parseInt(aga[6]);
+                int infa = Integer.parseInt(aga[7]);
 
                 Student student = new Student(lastName, firstName, city, year, matAnal, diskra, alGem, infa);
                 array5.add(student);
@@ -63,6 +63,14 @@ public class Runner {
         }
 		
 		Collections.sort(array5, myFourthComparator);
+		
+		for (Student student : array5) {
+			System.out.println(student);
+		}
+		
+		System.out.println("---");
+		
+		Collections.sort(array5);
 		
 		for (Student student : array5) {
 			System.out.println(student);

@@ -1,4 +1,4 @@
-public class Student {
+public class Student implements Comparable<Student>{
 	private String lastName;
 	private String firstName;
 	private String city;
@@ -27,8 +27,19 @@ public class Student {
 	
 	@Override
     public String toString() {
-        return "" + firstName + " " + lastName + " " + city + 
+        return "" + lastName + " " + firstName + " " + city + 
            " " + matAnalScore + " " + diskraScore + 
            " " + alGemScore + " " + infaScore;
+    }
+	
+	@Override
+    public int compareTo(Student other) {
+        int lastNameCompare = this.lastName.compareTo(other.lastName);
+        
+        if (lastNameCompare != 0) {
+            return lastNameCompare;
+        }
+        
+        return this.firstName.compareTo(other.firstName);
     }
 }
