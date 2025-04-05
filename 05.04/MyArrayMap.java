@@ -41,11 +41,16 @@ class MyEntry {
 		this.key = key;
 		this.value = value;
 	}
+	
+	@Override
+	public String toString() {
+		return "<" + key.toString() + ", " + value.toString() + ">";
+	}
 }
 
 public class MyArrayMap<K,V> implements Map<K,V>{
-	int capacity;
-	int size;
+	int capacity = 100;
+	int size = 0;
 	
 	public MyArrayMap() {
 		
@@ -81,11 +86,44 @@ public class MyArrayMap<K,V> implements Map<K,V>{
 	
 	@Override
 	public V put(K key, V value) {
-		return null;
+		if (key == null) {
+			return null;
+		}
+		
+		int index = find(key);
+		
+		if (index == -1) {
+			MyEntry entry = new MyEntry(key, value);
+			
+			entries[size] = entry;
+			
+			size++;
+			return null;
+		} else {
+			MyEntry entry = entries[index];
+			V oldValue = (V) entry.value;
+			entry.value = value;
+			return oldValue;
+		}
+	}
+	
+	public int find(K key) {
+		for (int i = 0; i < size; i++) {
+			if (entries[i].key.equals(key)) {
+				return i;
+			}
+		}
+		
+		return -1;
 	}
 	
 	public V get(Object key) {
-		return null;
+		int index = find((K) key);
+		if (index == -1) {
+			return
+		} else {
+			
+		}
 	}
 	
 	@Override
@@ -106,5 +144,16 @@ public class MyArrayMap<K,V> implements Map<K,V>{
 	@Override
 	public int size() {
 		return 0;
+	}
+	
+	@Override
+	public String toString() {
+		String result = "";
+		
+		for (int i = 0; i < size; i++) {
+			result += entries[i].toString() + " | ";
+		}
+		
+		return result;
 	}
 }
