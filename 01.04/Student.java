@@ -8,7 +8,7 @@ public class Student {
 	private int alGemScore;
 	private int infaScore;
 	
-	public int getAvarageScore() {
+	public int getAverageScore() {
         int result = (matAnalScore + diskraScore + alGemScore + infaScore)/4;
         
         return result;
@@ -23,5 +23,12 @@ public class Student {
         this.diskraScore = diskraScore;
         this.alGemScore = alGemScore;
         this.infaScore = infaScore;
+    }
+	
+	@Override
+    public String toString() {
+        return "" + firstName + " " + lastName + " " + city + 
+           " " + matAnalScore + " " + diskraScore + 
+           " " + alGemScore + " " + infaScore;
     }
 }
