@@ -13,4 +13,12 @@ public class User {
 		
 		return result;
 	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public String getScore() {
+		return score;
+	}
 }
