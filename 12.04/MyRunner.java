@@ -26,10 +26,6 @@ public class MyRunner {
 		catch (IOException e) {
 			System.out.println("");
 		}
-			
-		// for (User user : list) {
-			// System.out.println(user);
-		// }
 		
 		return list;
 	}
@@ -56,12 +52,20 @@ public class MyRunner {
 		return names;
 	}
 	
-	public static void allStats(ArrayList<String> list) {
+	public static ArrayList<String> allStats(ArrayList<String> list) {
+		ArrayList<String> result = new ArrayList<String>();
+		
 		for (int i = 0; i < list.size(); i++) {
-			for (int j = 0; j < list.size() - i - 1; j++) {
-				System.out.println(coincidentProcent(list.get(j), list.get(j+1)));
+			for (int j = 0; j < list.size(); j++) {
+				if (i == j) {
+					continue;
+				}
+				
+				result.add(coincidentProcent(list.get(i), list.get(j)));
 			}
 		}
+		
+		return result;
 	}
 	
 	public static ArrayList<String> allStatsPoName(ArrayList<String> list, String name) {
@@ -103,16 +107,6 @@ public class MyRunner {
 			}
 		}
 		
-		// for (int i = 0; i < users.size(); i++) {
-			// if (users[i].getName() == firstUser) {
-				// firstUserIndex = i;
-			// }
-			
-			// if (users[i].getName() == secondUser) {
-				// secondUserIndex = i;
-			// }
-		// }
-		
 		double result = ((double) 2*coincidentPlus / (totalFirstPlus + totalSecondPlus)) * 100;
 		
 		int secondResult = (int) result;
@@ -141,6 +135,7 @@ public class MyRunner {
 	
 	public static void main(String[] args) {
 		ArrayList<String> list = listOfNames();
+		ArrayList<String> listOfAll = allStats(list);
 		ArrayList<String> uzbekList = allStatsPoName(list, "Uzbek");
 		// ArrayList<Integer> list2 = toInt(uzbekList);
 		
@@ -148,12 +143,16 @@ public class MyRunner {
 		
 		Collections.sort(uzbekList, myComparator);
 		
+		Collections.sort(listOfAll, myComparator);
+		
 		for (String ans : uzbekList) {
 			System.out.println(ans);
 		}
 		
-		// for (int arr : list2) {
-			// System.out.println(arr);
-		// }
+		System.out.println("\n-----\n");
+		
+		for (String str : listOfAll) {
+			System.out.println(str);
+		}
 	}
 }
