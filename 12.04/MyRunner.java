@@ -116,28 +116,10 @@ public class MyRunner {
 		return answear;
 	}
 	
-	// public static ArrayList<Integer> toInt(ArrayList<String> list) {
-		// ArrayList<Integer> result = new ArrayList<Integer>();
-		
-		// String temp = "";
-		
-		// for (int i = 0; i < list.size(); i++) {
-			// for (int j = 0; list.get(i).charAt(j) != '%' ; j++) {
-				// temp += list.get(i).charAt(j);
-				
-			// }
-			// result.add(Integer.parseInt(temp));
-			// temp = "";
-		// }
-	
-		// return result;
-	// }
-	
 	public static void main(String[] args) {
 		ArrayList<String> list = listOfNames();
 		ArrayList<String> listOfAll = allStats(list);
 		ArrayList<String> uzbekList = allStatsPoName(list, "Uzbek");
-		// ArrayList<Integer> list2 = toInt(uzbekList);
 		
 		Comparator<String> myComparator = new CoincidentComparator();
 		
