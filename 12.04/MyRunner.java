@@ -43,7 +43,26 @@ public class MyRunner {
 		return null;
 	}
 	
-	public static void coincidentProcent(String firstUserName, String secondUserName) {
+	public static ArrayList<String> listOfNames() {
+		ArrayList<User> users = listOfUsers();
+		ArrayList<String> names = new ArrayList<String>();
+		
+		for (User user : users) {
+			names.add(user.getName());
+		}
+		
+		return names;
+	}
+	
+	public static void allStats(ArrayList<String> list) {
+		for (int i = 0; i < list.size(); i++) {
+			for (int j = 0; j < list.size() - i - 1; j++) {
+				System.out.println(coincidentProcent(list.get(j), list.get(j+1)));
+			}
+		}
+	}
+	
+	public static String coincidentProcent(String firstUserName, String secondUserName) {
 		User firstUser = returnUserPoName(firstUserName);
 		User secondUser = returnUserPoName(secondUserName);
 		
@@ -82,10 +101,16 @@ public class MyRunner {
 		
 		double result = ((double) 2*coincidentPlus / (totalFirstPlus + totalSecondPlus)) * 100;
 		
-		System.out.println(result + "%");
+		int secondResult = (int) result;
+		
+		String answear = secondResult + "% " + firstUserName + secondUserName;
+		
+		return answear;
 	}
 	
 	public static void main(String[] args) {
-		coincidentProcent("Frol", "Uzbek");
+		ArrayList<String> list = listOfNames();
+		
+		allStats(list);
 	}
 }
