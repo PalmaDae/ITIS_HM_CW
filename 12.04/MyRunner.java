@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class MyRunner {
 	public static ArrayList<User> listOfUsers() {
@@ -120,12 +122,38 @@ public class MyRunner {
 		return answear;
 	}
 	
+	// public static ArrayList<Integer> toInt(ArrayList<String> list) {
+		// ArrayList<Integer> result = new ArrayList<Integer>();
+		
+		// String temp = "";
+		
+		// for (int i = 0; i < list.size(); i++) {
+			// for (int j = 0; list.get(i).charAt(j) != '%' ; j++) {
+				// temp += list.get(i).charAt(j);
+				
+			// }
+			// result.add(Integer.parseInt(temp));
+			// temp = "";
+		// }
+	
+		// return result;
+	// }
+	
 	public static void main(String[] args) {
 		ArrayList<String> list = listOfNames();
 		ArrayList<String> uzbekList = allStatsPoName(list, "Uzbek");
+		// ArrayList<Integer> list2 = toInt(uzbekList);
+		
+		Comparator<String> myComparator = new CoincidentComparator();
+		
+		Collections.sort(uzbekList, myComparator);
 		
 		for (String ans : uzbekList) {
 			System.out.println(ans);
 		}
+		
+		// for (int arr : list2) {
+			// System.out.println(arr);
+		// }
 	}
 }
