@@ -62,6 +62,18 @@ public class MyRunner {
 		}
 	}
 	
+	public static ArrayList<String> allStatsPoName(ArrayList<String> list, String name) {
+		ArrayList<String> result = new ArrayList<String>();
+		
+		for (int i = 0; i < list.size(); i++) {
+			if (!list.get(i).equals(name)) {
+				result.add(coincidentProcent(name, list.get(i)));
+			}
+		}
+		
+		return result;
+	}
+	
 	public static String coincidentProcent(String firstUserName, String secondUserName) {
 		User firstUser = returnUserPoName(firstUserName);
 		User secondUser = returnUserPoName(secondUserName);
@@ -110,7 +122,10 @@ public class MyRunner {
 	
 	public static void main(String[] args) {
 		ArrayList<String> list = listOfNames();
+		ArrayList<String> uzbekList = allStatsPoName(list, "Uzbek");
 		
-		allStats(list);
+		for (String ans : uzbekList) {
+			System.out.println(ans);
+		}
 	}
 }
