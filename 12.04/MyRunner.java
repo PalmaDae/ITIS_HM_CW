@@ -9,7 +9,7 @@ public class MyRunner {
 	public static void main(String[] args) {
 		ArrayList<String> list = MyFunctions.listOfNames();
 		ArrayList<String> listOfAll = MyFunctions.allStats(list);
-		ArrayList<String> uzbekList = MyFunctions.allStatsPoName(list, "Uzbek");
+		ArrayList<String> uzbekList = MyFunctions.allStatsPoName(list, "Sultan");
 		
 		Comparator<String> myComparator = new CoincidentComparator();
 		
@@ -27,5 +27,12 @@ public class MyRunner {
 			System.out.println(str);
 		}
 		
+		System.out.println("\n-----\n");
+		
+		ArrayList<String> list3 = MyFunctions.recomMovie("Shlyapnik", "Arthur");
+		
+		for (String arr : list3) {
+			System.out.println(arr);
+		}
 	}
 }

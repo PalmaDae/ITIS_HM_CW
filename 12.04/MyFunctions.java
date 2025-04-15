@@ -30,6 +30,25 @@ public class MyFunctions {
 		return list;
 	}
 	
+	public static ArrayList<String> listOfMovies() {
+		ArrayList<String> list = new ArrayList<String>();
+		
+		try {
+			BufferedReader reader = new BufferedReader(new FileReader("C:\\Java_Projects\\12.04\\ListOfMovies.txt"));
+			String line;
+			int index = 0;
+			while ((line = reader.readLine()) != null) {
+				list.add(line);
+			}
+
+			}	
+		catch (IOException e) {
+			System.out.println("");
+		}
+		
+		return list;
+	}
+	
 	public static User returnUserPoName(String name) {
 		ArrayList<User> users = listOfUsers();
 		for (User user : users) {
@@ -56,7 +75,7 @@ public class MyFunctions {
 		ArrayList<String> result = new ArrayList<String>();
 		
 		for (int i = 0; i < list.size(); i++) {
-			for (int j = 0; j < list.size(); j++) {
+			for (int j = i + 1; j < list.size(); j++) {
 				if (i == j) {
 					continue;
 				}
@@ -114,5 +133,33 @@ public class MyFunctions {
 		String answear = secondResult + "% " + firstUserName + secondUserName;
 		
 		return answear;
+	}
+	
+	public static ArrayList<String> recomMovie(String firstName, String secondName) {
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		ArrayList<String> list2 = listOfMovies();
+		ArrayList<String> list3 = new ArrayList<String>();
+		
+		User firstUser = returnUserPoName(firstName);
+		User secondUser = returnUserPoName(secondName);
+		
+		String firstScore = firstUser.getScore();
+		String secondScore = secondUser.getScore();
+		
+		int length = firstScore.length();
+		
+		for (int i = 0; i < length; i++) {
+			if (firstScore.charAt(i) == '-' && secondScore.charAt(i) == '+') {
+				list.add(i+1);
+			}
+		}
+		
+		for (int i = 0; i < list2.size(); i++) {
+			if (list.equals(i)) {
+				list3.add(list2.get(i));
+			}
+		}
+		
+		return list3;
 	}
 }
