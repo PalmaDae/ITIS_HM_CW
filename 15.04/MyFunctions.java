@@ -41,13 +41,7 @@ public class MyFunctions {
 		return names;
 	}
 	
-	public static void main(String[] args) {
-		ArrayList<String> names = usersFrom("Казань");
+	public static ArrayList<String> friendsFrom(String firstFriend, String secondFriend) {
 		
-		for (String str : names) {
-			System.out.println(str);
-		}
 	}
-	
-	
 }
