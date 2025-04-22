@@ -1,9 +1,17 @@
 public class Subscriptions {
-	User who;
-	User onWhom;
+	public String who;
+	public String onWhom;
 	
-	public Subscriptions(User who, User onWhom) {
+	public Subscriptions(String who, String onWhom) {
 		this.who = who;
 		this.onWhom = onWhom;
+	}
+	
+	public String getWho() {
+		return who;
+	}
+	
+	public String getOnWhom() {
+		return onWhom;
 	}
 }
