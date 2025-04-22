@@ -7,7 +7,14 @@ public class MyRunner {
 		// MyFunctions.printNames(names);
 		
 		
+		// ArrayList<Subscriptions> list = MyFunctions.listOfSubcribers();
+		
+		// for (Subscriptions str : list) {
+			// System.out.println(str);
+		// }
+		
 		ArrayList<String> list = MyFunctions.friendsFrom("Казань");
+		
 		
 		for (String str : list) {
 			System.out.println(str);

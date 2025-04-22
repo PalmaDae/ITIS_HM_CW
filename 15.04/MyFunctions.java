@@ -52,26 +52,13 @@ public class MyFunctions {
 		return list;
 	}
 	
-	// public static ArrayList<String> usersFrom(String city) {
-		// ArrayList<String> names = new ArrayList<String>();
-		// ArrayList<User> users = listOfUsers();
-		
-		// for (User user : users) {
-			// if (user.getCity().equals(city)) {
-				// names.add(user.getName());
-			// }
-		// }
-		
-		// return names;
-	// }
-	
 	public static ArrayList<User> usersFrom(String city) {
 		ArrayList<User> userCity = new ArrayList<User>();
 		ArrayList<User> users = listOfUsers();
 		
 		for (User user : users) {
 			if (user.getCity().equals(city)) {
-				names.add(user);
+				userCity.add(user);
 			}
 		}
 		
@@ -84,43 +71,44 @@ public class MyFunctions {
 		}
 	}
 	
-	public static ArrayList<String> friendsFrom(String city) {
-		ArrayList<Subscriptions> subs = listOfSubcribers();
-		ArrayList<User> usersFromCity = usersFrom(city);
-		ArrayList<String> listOfFriends = new ArrayList<String>();
-		
+	public static boolean isFollow(String who, String onWhom, ArrayList<Subscriptions> subs) {
 		for (int i = 0; i < subs.size(); i++) {
-			
-			
-			
-			for (int j = i + 1; j < subs.size(); j++) {
-				if (i == j) {
-					continue;
-				}
-				
-				listOfFriends.add(subs.get(i).getWho());
-				listOfFriends.add(subs.get(j).getOnWhom());
+			String a = subs.get(i).getWho();
+			String b = subs.get(i).getOnWhom();
+
+			if (a.equals(who) && b.equals(onWhom)) {
+				return true;
 			}
 		}
-		
-		return listOfFriends;
+		return false;
 	}
 
-	//27 страница
+	public static boolean isFriends(User a, User b, ArrayList<Subscriptions> subs) {
+		boolean first = isFollow(a.getID(), b.getID(), subs);
+		boolean second = isFollow(b.getID(), a.getID(), subs);
 
-	// public static ArrayList<String> allStats(ArrayList<String> list) {
-		// ArrayList<String> result = new ArrayList<String>();
-		
-		// for (int i = 0; i < list.size(); i++) {
-			// for (int j = i + 1; j < list.size(); j++) {
-				// if (i == j) {
-					// continue;
-				// }
-				
-				// result.add(coincidentProcent(list.get(i), list.get(j)));
-			// }
-		// }
-		
-		// return result;
-	// }
+		return first && second;
+	}
+
+	public static ArrayList<String> friendsFrom(String city) {
+		ArrayList<Subscriptions> subs = listOfSubcribers();
+		ArrayList<User> users = usersFrom(city);
+		ArrayList<String> list = new ArrayList<String>();
+
+		for (int i = 0; i < users.size(); i++) {
+			User userA = users.get(i);
+			for (int j = i + 1; j < users.size(); j++) {
+				User userB = users.get(j);
+
+				if (isFriends(userA, userB, subs)) {
+					list.add(userA.getName() + " <3 " + userB.getName());
+				}
+			}
+		}
+
+		return list;
+	}
+
+
+	//27 страница
 }

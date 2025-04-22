@@ -14,4 +14,9 @@ public class Subscriptions {
 	public String getOnWhom() {
 		return onWhom;
 	}
+	
+	@Override
+	public String toString() {
+		return who + " " + onWhom;
+	}
 }
