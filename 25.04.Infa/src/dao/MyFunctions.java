@@ -1,5 +1,9 @@
+package dao;
+
 import java.util.*;
 import java.io.*;
+import entity.*;
+import database.*;
 
 public class MyFunctions {
 	public static ArrayList<User> listOfUsers() {
@@ -120,17 +124,42 @@ public class MyFunctions {
 		User theMostPopular = null;
 		User theFriendlist = null;
 		
-		for (int i = 0; i < users.size(); i++) {
-			User userA = users.get(i);
+		for (User userA : users) {
+			int following = 0;
+			int followers = 0;
+			int friends = 0;
 			
-			for (int j = i + 1; j < users.size(); j++) {
-				User userB = users.get(j);
-				
-				if (isFollow(userA.getID(), userB.getID(), subs)) {
-					
+			for (User userB : users) {
+				if (userA.getID() != userB.getID()) {
+					if (isFollow(userA.getID(), userB.getID(), subs)) {
+						following++;
+					}
+					if (isFollow(userB.getID(), userA.getID(), subs)) {
+						followers++;
+					}
+					if (isFriends(userA, userB, subs)) {
+						friends++;
+					}
 				}
 			}
+			
+			if (following > cntOfSubs) {
+				cntOfSubs = following;
+				theMostLonely = userA;
+			}
+			
+			if (followers > cntOfFollowers) {
+				cntOfFollowers = followers;
+				theMostPopular = userA;
+			}
+			
+			if (friends > cntOfFriends) {
+				cntOfFriends = friends;
+				theFriendlist = userA;
+			}
 		}
+		
+		return "1";
 	}
 
 	//27 страница

@@ -1,4 +1,8 @@
+package dao;
+
 import java.util.*;
+import entity.*;
+import database.*;
 
 public class MyRunner {
 	public static void main(String[] args) {
@@ -13,11 +17,11 @@ public class MyRunner {
 			// System.out.println(str);
 		// }
 		
-		ArrayList<String> list = MyFunctions.friendsFrom("Казань");
+		// ArrayList<String> list = MyFunctions.friendsFrom("Казань");
 		
 		
-		for (String str : list) {
-			System.out.println(str);
-		}
+		// for (String str : list) {
+			// System.out.println(str);
+		// }
 	}
 }
