@@ -1,6 +1,6 @@
 package entity;
 
-public class User {
+public class User implements Comparable<User>{
 	public String id;
 	public String name;
 	public String city;
@@ -24,4 +24,20 @@ public class User {
 	public String getID() {
 		return id;
 	}
+	
+	@Override
+	public String toString() {
+		return name;
+	}
+	
+	@Override
+    public int compareTo(User other) {
+		int nameCompare = this.name.compareTo(other.name);
+		
+        if (nameCompare != 0) {
+            return nameCompare;
+        }
+        
+        return this.name.compareTo(other.name);
+    }
 }

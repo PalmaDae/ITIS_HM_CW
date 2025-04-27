@@ -8,6 +8,10 @@ public class Database {
 	public ArrayList<User> listOfUsers = listOfUsers();
 	public ArrayList<Subscriptions> listOfSubs = listOfSubcribers();
 	
+	public Database() {
+		
+	}
+	
 	public static ArrayList<User> listOfUsers() {
 		ArrayList<User> list = new ArrayList<User>();
 		

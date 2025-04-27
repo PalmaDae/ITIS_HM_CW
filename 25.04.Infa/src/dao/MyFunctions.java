@@ -6,59 +6,14 @@ import entity.*;
 import database.*;
 
 public class MyFunctions {
-	public static ArrayList<User> listOfUsers() {
-		ArrayList<User> list = new ArrayList<User>();
-		
-		try {
-			BufferedReader reader = new BufferedReader(new FileReader("C:\\Java_Projects\\15.04\\Users.txt"));
-			String line;
-			
-			while ((line = reader.readLine()) != null) {
-				String[] data = line.split("#");
-				String id = data[0];
-				String name = data[1];
-				String city = data[2];
-				String birthday = data[3];
-
-				User user = new User(id, name, city, birthday);
-				list.add(user);
-			}
-
-			}	
-		catch (IOException e) {
-			System.out.println("");
-		}
-		
-		return list;
-	}
+	public static Database dbase = new Database();
 	
-	public static ArrayList<Subscriptions> listOfSubcribers() {
-		ArrayList<Subscriptions> list = new ArrayList<Subscriptions>();
-		
-		try {
-			BufferedReader reader = new BufferedReader(new FileReader("C:\\Java_Projects\\15.04\\SubscribeId.txt"));
-			String line;
-			
-			while ((line = reader.readLine()) != null) {
-				String[] data = line.split("#");
-				String who = data[0];
-				String onWhom = data[1];
-
-				Subscriptions subscriber = new Subscriptions(who, onWhom);
-				list.add(subscriber);
-			}
-
-			}	
-		catch (IOException e) {
-			System.out.println("");
-		}
-		
-		return list;
-	}
+	public static ArrayList<User> listUsers = dbase.getUsers();  
+	public static ArrayList<Subscriptions> listSubscriptions = dbase.getSubs();  
 	
 	public static ArrayList<User> usersFrom(String city) {
 		ArrayList<User> userCity = new ArrayList<User>();
-		ArrayList<User> users = listOfUsers();
+		ArrayList<User> users = listUsers;
 		
 		for (User user : users) {
 			if (user.getCity().equals(city)) {
@@ -95,7 +50,7 @@ public class MyFunctions {
 	}
 
 	public static ArrayList<String> friendsFrom(String city) {
-		ArrayList<Subscriptions> subs = listOfSubcribers();
+		ArrayList<Subscriptions> subs = listSubscriptions;
 		ArrayList<User> users = usersFrom(city);
 		ArrayList<String> list = new ArrayList<String>();
 
@@ -114,8 +69,8 @@ public class MyFunctions {
 	}
 	
 	public static String theMostUser(User user) {
-		ArrayList<User> users = listOfUsers();
-		ArrayList<Subscriptions> subs = listOfSubcribers();
+		ArrayList<User> users = listUsers;
+		ArrayList<Subscriptions> subs = listSubscriptions;
 		int cntOfFriends = 0;
 		int cntOfSubs = 0;
 		int cntOfFollowers = 0;
@@ -162,5 +117,9 @@ public class MyFunctions {
 		return "1";
 	}
 
+	public static void firstStudent(ArrayList<User> list) {
+		
+	}
+	
 	//27 страница
 }
