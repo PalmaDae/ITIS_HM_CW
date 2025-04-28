@@ -10,7 +10,9 @@ public class MyFunctions {
 	
 	public static ArrayList<User> listUsers = dbase.getUsers();  
 	public static ArrayList<Subscriptions> listSubscriptions = dbase.getSubs();  
-	public static ArrayList<Subscriptions> listGroups = dbase.getGroups();  
+	public static ArrayList<Group> listGroups = dbase.getGroups();  
+	public static ArrayList<Message> listMessages = dbase.getMessages();
+	public static ArrayList<Member> listOfMembers = dbase.getMembers();
 	
 	public static ArrayList<User> usersFrom(String city) {
 		ArrayList<User> userCity = new ArrayList<User>();
@@ -152,8 +154,12 @@ public class MyFunctions {
 		return theMostFriendlist;
 	}
 	
-	public static void firstStudent(ArrayList<User> list) {
+	public static Map<String, Integer> mapOfCities() {
+		Map<String, Integer> newMap = new HashMap<>();
 		
+		
+		
+		return newMap;
 	}
 	
 	//27 страница
