@@ -1,59 +1,54 @@
 package dao;
 
 import java.util.*;
-import java.io.*;
 import entity.*;
 import database.*;
 
 public class MyFunctions {
-	public static Database dbase = new Database();
-	
-	public static ArrayList<User> listUsers = dbase.getUsers();  
-	public static ArrayList<Subscriptions> listSubscriptions = dbase.getSubs();  
-	public static ArrayList<Group> listGroups = dbase.getGroups();  
-	public static ArrayList<Message> listMessages = dbase.getMessages();
-	public static ArrayList<Member> listOfMembers = dbase.getMembers();
-	
+	private static Database dbase = new Database();
+	private static ArrayList<User> listUsers = dbase.getUsers();  
+	private static ArrayList<Subscriptions> listSubscriptions = dbase.getSubs();  
+	private static ArrayList<Group> listGroups = dbase.getGroups();  
+	private static ArrayList<Message> listMessages = dbase.getMessages();
+	private static ArrayList<Member> listOfMembers = dbase.getMembers();
+
+    
 	public static ArrayList<User> usersFrom(String city) {
 		ArrayList<User> userCity = new ArrayList<User>();
-		ArrayList<User> users = listUsers;
-		
-		for (User user : users) {
+		for (User user : listUsers) {
 			if (user.getCity().equals(city)) {
 				userCity.add(user);
 			}
 		}
-		
 		return userCity;
 	}
-	
+
+    
 	public static void printNames(ArrayList<User> list) {
 		for (User user : list) {
 			System.out.println(user.getName());
 		}
 	}
-	
-	public static boolean isFollow(String who, String onWhom, ArrayList<Subscriptions> subs) {
-		for (int i = 0; i < subs.size(); i++) {
-			String a = subs.get(i).getWho();
-			String b = subs.get(i).getOnWhom();
 
-			if (a.equals(who) && b.equals(onWhom)) {
+    
+	public static boolean isFollow(String who, String onWhom) {
+		for (Subscriptions sub : listSubscriptions) {
+			if (sub.getWho().equals(who) && sub.getOnWhom().equals(onWhom)) {
 				return true;
 			}
 		}
 		return false;
 	}
 
-	public static boolean isFriends(User a, User b, ArrayList<Subscriptions> subs) {
-		boolean first = isFollow(a.getID(), b.getID(), subs);
-		boolean second = isFollow(b.getID(), a.getID(), subs);
-
+    
+	public static boolean isFriends(User a, User b) {
+		boolean first = isFollow(a.getID(), b.getID());
+		boolean second = isFollow(b.getID(), a.getID());
 		return first && second;
 	}
 
+
 	public static ArrayList<String> friendsFrom(String city) {
-		ArrayList<Subscriptions> subs = listSubscriptions;
 		ArrayList<User> users = usersFrom(city);
 		ArrayList<String> list = new ArrayList<String>();
 
@@ -62,7 +57,7 @@ public class MyFunctions {
 			for (int j = i + 1; j < users.size(); j++) {
 				User userB = users.get(j);
 
-				if (isFriends(userA, userB, subs)) {
+				if (isFriends(userA, userB)) {
 					list.add(userA.getName() + " <3 " + userB.getName());
 				}
 			}
@@ -70,48 +65,41 @@ public class MyFunctions {
 
 		return list;
 	}
-	
+
 	public static User theMostLonely() {
-		ArrayList<User> users = listUsers;
-		ArrayList<Subscriptions> subs = listSubscriptions;
-		int cntOfSubs = 0;
-		
 		User theMostLonely = null;
-		
-		for (User userA : users) {
+		int cntOfSubs = Integer.MAX_VALUE;
+
+		for (User userA : listUsers) {
 			int following = 0;
 			
-			for (User userB : users) {
-				if (userA.getID() != userB.getID()) {
-					if (isFollow(userA.getID(), userB.getID(), subs)) {
+			for (User userB : listUsers) {
+				if (!userA.getID().equals(userB.getID())) {
+					if (isFollow(userA.getID(), userB.getID())) {
 						following++;
 					}
 				}
 			}
-			
-			if (following > cntOfSubs) {
+
+			if (following < cntOfSubs) {
 				cntOfSubs = following;
 				theMostLonely = userA;
 			}
 		}
-		
+
 		return theMostLonely;
 	}
-	
+
 	public static User theMostPopular() {
-		ArrayList<User> users = listUsers;
-		ArrayList<Subscriptions> subs = listSubscriptions;
-		
-		int cntOfFollowers = 0;
 		User theMostPopular = null;
-		
-		
-		for (User userA : users) {
+		int cntOfFollowers = 0;
+
+		for (User userA : listUsers) {
 			int followers = 0;
 			
-			for (User userB : users) {
-				if (userA.getID() != userB.getID()) {
-					if (isFollow(userB.getID(), userA.getID(), subs)) {
+			for (User userB : listUsers) {
+				if (!userA.getID().equals(userB.getID())) {
+					if (isFollow(userB.getID(), userA.getID())) {
 						followers++;
 					}
 				}
@@ -122,24 +110,20 @@ public class MyFunctions {
 				theMostPopular = userA;
 			}
 		}
-		
+
 		return theMostPopular;
 	}
-	
+
 	public static User theMostFriendlist() {
-		ArrayList<User> users = listUsers;
-		ArrayList<Subscriptions> subs = listSubscriptions;
-		
-		int cntOfFriends = 0;
 		User theMostFriendlist = null;
-		
-		
-		for (User userA : users) {
+		int cntOfFriends = 0;
+
+		for (User userA : listUsers) {
 			int friends = 0;
 			
-			for (User userB : users) {
-				if (userA.getID() != userB.getID()) {
-					if (isFriends(userA, userB, subs)) {
+			for (User userB : listUsers) {
+				if (!userA.getID().equals(userB.getID())) {
+					if (isFriends(userA, userB)) {
 						friends++;
 					}
 				}
@@ -150,17 +134,8 @@ public class MyFunctions {
 				theMostFriendlist = userA;
 			}
 		}
-		
+
 		return theMostFriendlist;
 	}
-	
-	public static Map<String, Integer> mapOfCities() {
-		Map<String, Integer> newMap = new HashMap<>();
-		
-		
-		
-		return newMap;
-	}
-	
 	//27 страница
 }

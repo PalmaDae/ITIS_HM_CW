@@ -10,4 +10,8 @@ public class Group {
 		this.name = name;
 		this.city = city;
 	}
+	
+	public String getId() {
+		return id;
+	}
 }

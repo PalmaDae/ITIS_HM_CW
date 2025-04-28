@@ -1,19 +1,19 @@
 package entity;
 
 public class Subscriptions {
-	public String who;
-	public String onWhom;
+	public User who;
+	public User onWhom;
 	
-	public Subscriptions(String who, String onWhom) {
+	public Subscriptions(User who, User onWhom) {
 		this.who = who;
 		this.onWhom = onWhom;
 	}
 	
-	public String getWho() {
+	public User getWho() {
 		return who;
 	}
 	
-	public String getOnWhom() {
+	public User getOnWhom() {
 		return onWhom;
 	}
 	

@@ -1,11 +1,11 @@
 package entity;
 
 public class Member {
-	public String userId;
-	public String groupId;
+	public User user;
+	public Group group;
 	
-	public Member(String userId, String groupId) {
-		this.userId = userId;
-		this.groupId = groupId;
+	public Member(User user, Group group) {
+		this.user = user;
+		this.group = group;
 	}
 }

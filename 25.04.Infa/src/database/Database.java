@@ -3,6 +3,7 @@ package database;
 import java.util.*;
 import java.io.*;
 import entity.*;
+import dao.*;
 
 public class Database {
 	public ArrayList<User> listOfUsers;
@@ -37,7 +38,7 @@ public class Database {
 			String setOn = data[3];
 			String opened = data[4];
 			
-			Message message = new Message(sender, receiver, text, Boolean.parseBoolean(setOn), Boolean.parseBoolean(opened));
+			Message message = new Message(ReturnEntities.returnUser(sender), ReturnEntities.returnUser(receiver), text, Boolean.parseBoolean(setOn), Boolean.parseBoolean(opened));
 			list.add(message);
 		}
 		scanner.close();
@@ -56,7 +57,7 @@ public class Database {
 			String userID = data[0];
 			String groupID = data[1];
 			
-			Member member = new Member(userID, groupID);
+			Member member = new Member(ReturnEntities.returnUser(userID) , ReturnEntities.returnGroup(groupID));
 			list.add(member);
 		}
 		scanner.close();
@@ -116,7 +117,7 @@ public class Database {
 			String who = data[0];
 			String onWhom = data[1];
 
-			Subscriptions subscriber = new Subscriptions(who, onWhom);
+			Subscriptions subscriber = new Subscriptions(ReturnEntities.returnUser(who), ReturnEntities.returnUser(onWhom));
 			list.add(subscriber);
 		}
 		scanner.close();
