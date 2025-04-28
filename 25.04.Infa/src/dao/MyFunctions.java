@@ -10,6 +10,7 @@ public class MyFunctions {
 	
 	public static ArrayList<User> listUsers = dbase.getUsers();  
 	public static ArrayList<Subscriptions> listSubscriptions = dbase.getSubs();  
+	public static ArrayList<Subscriptions> listGroups = dbase.getGroups();  
 	
 	public static ArrayList<User> usersFrom(String city) {
 		ArrayList<User> userCity = new ArrayList<User>();
@@ -68,32 +69,20 @@ public class MyFunctions {
 		return list;
 	}
 	
-	public static String theMostUser(User user) {
+	public static User theMostLonely() {
 		ArrayList<User> users = listUsers;
 		ArrayList<Subscriptions> subs = listSubscriptions;
-		int cntOfFriends = 0;
 		int cntOfSubs = 0;
-		int cntOfFollowers = 0;
 		
 		User theMostLonely = null;
-		User theMostPopular = null;
-		User theFriendlist = null;
 		
 		for (User userA : users) {
 			int following = 0;
-			int followers = 0;
-			int friends = 0;
 			
 			for (User userB : users) {
 				if (userA.getID() != userB.getID()) {
 					if (isFollow(userA.getID(), userB.getID(), subs)) {
 						following++;
-					}
-					if (isFollow(userB.getID(), userA.getID(), subs)) {
-						followers++;
-					}
-					if (isFriends(userA, userB, subs)) {
-						friends++;
 					}
 				}
 			}
@@ -102,21 +91,67 @@ public class MyFunctions {
 				cntOfSubs = following;
 				theMostLonely = userA;
 			}
+		}
+		
+		return theMostLonely;
+	}
+	
+	public static User theMostPopular() {
+		ArrayList<User> users = listUsers;
+		ArrayList<Subscriptions> subs = listSubscriptions;
+		
+		int cntOfFollowers = 0;
+		User theMostPopular = null;
+		
+		
+		for (User userA : users) {
+			int followers = 0;
 			
+			for (User userB : users) {
+				if (userA.getID() != userB.getID()) {
+					if (isFollow(userB.getID(), userA.getID(), subs)) {
+						followers++;
+					}
+				}
+			}
+
 			if (followers > cntOfFollowers) {
 				cntOfFollowers = followers;
 				theMostPopular = userA;
 			}
+		}
+		
+		return theMostPopular;
+	}
+	
+	public static User theMostFriendlist() {
+		ArrayList<User> users = listUsers;
+		ArrayList<Subscriptions> subs = listSubscriptions;
+		
+		int cntOfFriends = 0;
+		User theMostFriendlist = null;
+		
+		
+		for (User userA : users) {
+			int friends = 0;
 			
+			for (User userB : users) {
+				if (userA.getID() != userB.getID()) {
+					if (isFriends(userA, userB, subs)) {
+						friends++;
+					}
+				}
+			}
+
 			if (friends > cntOfFriends) {
 				cntOfFriends = friends;
-				theFriendlist = userA;
+				theMostFriendlist = userA;
 			}
 		}
 		
-		return "1";
+		return theMostFriendlist;
 	}
-
+	
 	public static void firstStudent(ArrayList<User> list) {
 		
 	}
