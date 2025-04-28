@@ -68,7 +68,7 @@ public class MyFunctions {
 
 	public static User theMostLonely() {
 		User theMostLonely = null;
-		int cntOfSubs = Integer.MAX_VALUE;
+		int cntOfSubs = 0;
 
 		for (User userA : listUsers) {
 			int following = 0;
