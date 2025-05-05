@@ -8,4 +8,12 @@ public class Member {
 		this.user = user;
 		this.group = group;
 	}
+	
+	public User getUser() {
+		return user;
+	}
+	
+	public Group getGroup() {
+		return group;
+	}
 }
