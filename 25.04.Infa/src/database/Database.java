@@ -23,7 +23,6 @@ public class Database {
 		}
 	}
 
-	// Методы для загрузки данных
 	private ArrayList<User> loadUsers() throws IOException {
 		ArrayList<User> list = new ArrayList<>();
 		Scanner scanner = new Scanner(new File("C:\\Java_Projects\\25.04.Infa\\data\\Users.txt"));
