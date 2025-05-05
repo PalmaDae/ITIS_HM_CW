@@ -5,7 +5,7 @@ import database.*;
 import java.util.ArrayList;
 
 public class ReturnEntities {
-	public static Database dbase = new Database();
+	private static Database dbase;
 	public static ArrayList<User> listUsers = dbase.getUsers();  
 	public static ArrayList<Group> listGroups = dbase.getGroups();
 	
@@ -14,7 +14,7 @@ public class ReturnEntities {
 		
 		
 		for (User user : listOfUser) {
-			if (user.getID() == id) {
+			if (user.getID().equals(id)	) {
 				return user;
 			}
 		}
@@ -24,7 +24,7 @@ public class ReturnEntities {
 	
 	public static Group returnGroup(String id) {
 		for (Group group : listGroups) {
-			if (group.getId() == id) {
+			if (group.getId().equals(id)) {
 				return group;
 			}
 		}

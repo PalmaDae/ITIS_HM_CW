@@ -6,7 +6,7 @@ import database.*;
 
 public class MyFunctions {
 	private static Database dbase = new Database();
-	private static ArrayList<User> listUsers = dbase.getUsers();  
+	public static ArrayList<User> listUsers = dbase.getUsers();  
 	private static ArrayList<Subscriptions> listSubscriptions = dbase.getSubs();  
 	private static ArrayList<Group> listGroups = dbase.getGroups();  
 	private static ArrayList<Message> listMessages = dbase.getMessages();
@@ -136,6 +136,20 @@ public class MyFunctions {
 		}
 
 		return theMostFriendlist;
+	}
+	
+	public static Map<String, Integer> mapOfCities() {
+		Map<String, Integer> newMap = new HashMap<>();
+		
+		for (Message message : listMessages) {
+			User user = message.getSender();
+			
+			String city = user.getCity();
+			
+			newMap.put(city, newMap.getOrDefault(city, 0) + 1);
+		}
+		
+		return newMap;
 	}
 	//27 страница
 }

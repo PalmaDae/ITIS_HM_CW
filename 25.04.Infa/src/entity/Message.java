@@ -14,4 +14,8 @@ public class Message {
 		this.sentOn = sentOn;
 		this.opened = opened;
 	}
+	
+	public User getSender() {
+		return sender;
+	}
 }
