@@ -18,5 +18,11 @@ public class MyRunner {
 		for (Subscriptions sub : list2) {
 			System.out.println(sub);
 		}
+		
+		String result = list.stream().map(x -> x.getName()).reduce((s1,s2) -> s1.compareTo(s2) < 0 ? s1 : s2).orElse("");
+		
+		System.out.println(result);
+		
+		String answ = list.stream().map(x -> )
 	}
 }
