@@ -5,12 +5,12 @@ import java.util.*;
 import database.*;
 
 public class MessageDAO {
-	public static List<String> listOfMessages = Database.messages;
+	public static List<String> listOfMessages = getMessages();
 	
 	public static List<Message> getMessages() {
 		List<Message> list = new ArrayList<>();
 		
-		for (String line : listOfMessages) {
+		for (String line : Database.messages) {
 		String[] data = line.split("#");
 
 			String sender = data[0];
@@ -24,5 +24,19 @@ public class MessageDAO {
 		}
 		
 		return list;
+	}
+	
+	public static Map<String, Integer> mapOfCities() {
+		Map<String, Integer> newMap = new HashMap<>();
+		
+		for (Message message : listOfMessages) {
+			User user = message.getSender();
+			
+			String city = user.getCity();
+			
+			newMap.put(city, newMap.getOrDefault(city, 0) + 1);
+		}
+		
+		return newMap;
 	}
 }

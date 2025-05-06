@@ -5,12 +5,12 @@ import java.util.*;
 import database.*;
 
 public class GroupDAO {
-	public static List<String> listOfGroups = Database.groups;
+	public static List<String> listOfGroups = getGroups();
 	
 	public static List<Group> getGroups() {
 		List<Group> list = new ArrayList<>();
 		
-		for (String line : listOfGroups) {
+		for (String line : Database.groups) {
 			String[] data = line.split("#");
 
 			String id = data[0];
@@ -31,5 +31,32 @@ public class GroupDAO {
 			}
 		}
 		return null;
+	}
+	
+	private static Group findMaxGroup(Map<Group, Integer> groupCount) {
+		Group maxGroup = null;
+		int maxCount = 0;
+		
+		for (Map.Entry<Group, Integer> entry : groupCount.entrySet()) {
+			if (entry.getValue() > maxCount) {
+				maxGroup = entry.getKey();
+				maxCount = entry.getValue();
+			}
+		}
+		
+		return maxGroup;
+	}
+	
+	public static ArrayList<Group> topKGroups(int k) {
+		Map<Group, Integer> groupCount = MemberDAO.countGroupMembers();
+		ArrayList<Group> result = new ArrayList<>();
+		
+		for (int i = 0; i < k; i++) {
+			Group maxGroup = findMaxGroup(groupCount);
+			result.add(maxGroup);
+			groupCount.remove(maxGroup);
+		}
+		
+		return result;
 	}
 }
