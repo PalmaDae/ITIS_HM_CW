@@ -921,7 +921,10 @@ if (!value.match(reg)) { return false; }
  
       <li style="font-family:Myriad Pro, 'Arial Regular', Arial   sans-serif;width:962px;height:262px;">
          <div style=" height:262px;width:962px;">
-<img src="https://kpfu.ru//portal/docs/F_1083025481/den_pobedy_1.1.png" alt="Портал КФУ \ Образование \ Институт информационных технологий и интеллектуальных систем" title="Портал КФУ \ Образование \ Институт информационных технологий и интеллектуальных систем" style=" height:262px;width:962px;"  />
+<img src="https://kpfu.ru//portal/docs/F386896188/den_pobedy_2.1.png" alt="С Днём Победы!" title="С Днём Победы!" style=" height:262px;width:962px;"  />
+</div>
+<div  style="position:relative;height:262px;width:600px;left:373px;z-index:10;"> 
+ <a href="https://kpfu.ru/main_page?p_cid=465916&amp;p_random=477" target="_blank" style="margin: 0px 50px 20px 35px ;position:relative;top:-65px;background-image: url(https://shelly.kpfu.ru/pdf/picture/mainpage_new/more2.png);width:170px;background-repeat:no-repeat;height:35px;display:block;"></a>
 </div>
 </li>
  
@@ -1237,6 +1240,7 @@ function openphoto(vid){
 }
   </script>
 <ul id="jcarousel"  class="jcarousel-skin-tango" style="height:113px;overflow:hidden;position:relative;left:20px;">
+<li onclick="alert_faculty(465916);"><img src="/portal/docs/F_98515385/den.pobedy_2.jpg" style=" height:96px;border:none;" alt="С Днём Победы! ,ИТИС, программная инженерия, День Победы" title="С Днём Победы! ,ИТИС, программная инженерия, День Победы" /></li>
 <li onclick="alert_faculty(466443);"><img src="/portal/docs/F_1545745205/P1188388.JPG" style=" height:96px;border:none;" alt="'Журавли Победы' ИТИС теперь летают в ИТ-парке имени Башира Рамеева ,ИТИС, программная инженерия, День радио и связи, 80-летие Великой Победы" title="'Журавли Победы' ИТИС теперь летают в ИТ-парке имени Башира Рамеева ,ИТИС, программная инженерия, День радио и связи, 80-летие Великой Победы" /></li>
 <li onclick="alert_faculty(465914);"><img src="/portal/docs/F_176133123/VOV_mashiny._2_.jpg" style=" height:96px;border:none;" alt="Шифровальные машины СССР в годы Великой Отечественной войны ,ИТИС, программная инженерия, криптография, ВОВ, шифровальная машина" title="Шифровальные машины СССР в годы Великой Отечественной войны ,ИТИС, программная инженерия, криптография, ВОВ, шифровальная машина" /></li>
 <li onclick="alert_faculty(466378);"><img src="/portal/docs/F_1950661785/5249058912206973680.jpg" style=" height:96px;border:none;" alt="Какая марка автомобилей участвовала в автопробеге, посвящённом победе в Великой Отечественной войне в 1995 году? ,ИТИС, программная инженерия, День Победы, 80 лет Победы, ВОВ" title="Какая марка автомобилей участвовала в автопробеге, посвящённом победе в Великой Отечественной войне в 1995 году? ,ИТИС, программная инженерия, День Победы, 80 лет Победы, ВОВ" /></li>
@@ -1286,7 +1290,6 @@ function openphoto(vid){
 <li onclick="alert_faculty(463681);"><img src="/portal/docs/F_1271520904/5413378081709746158.jpg" style=" height:96px;border:none;" alt="Студенты ИТИС приняли участие в открытой встрече Айрата Хайруллина с представителями ИТ-компаний РТ ,ИТИС, программная инженерия, министр цифрового развития, минцифра РТ" title="Студенты ИТИС приняли участие в открытой встрече Айрата Хайруллина с представителями ИТ-компаний РТ ,ИТИС, программная инженерия, министр цифрового развития, минцифра РТ" /></li>
 <li onclick="alert_faculty(463441);"><img src="/portal/docs/F203414279/5398026245096205754.jpg" style=" height:96px;border:none;" alt="ИТИС и представительство Samsung Electronics в странах СНГ рассматривают дополнительные направления сотрудничества. ,ИТИС, программная инженерия" title="ИТИС и представительство Samsung Electronics в странах СНГ рассматривают дополнительные направления сотрудничества. ,ИТИС, программная инженерия" /></li>
 <li onclick="alert_faculty(463400);"><img src="/portal/docs/F_1689323607/5399885630927924736_oblozhka.jpg" style=" height:96px;border:none;" alt="О преимуществах высшего образования с практическим опытом ,ИТИС, программная инженерия" title="О преимуществах высшего образования с практическим опытом ,ИТИС, программная инженерия" /></li>
-<li onclick="alert_faculty(463362);"><img src="/portal/docs/F_1773121233/photo_2025_03_21.11.22.13_11zon.jpg" style=" height:96px;border:none;" alt="День открытых дверей ИТИС 29.03.2025 ,ИТИС, день открытых дверей, поступление" title="День открытых дверей ИТИС 29.03.2025 ,ИТИС, день открытых дверей, поступление" /></li>
 </ul>
 </div>
 <div style="clear:both;float:left;width:485px;" class="header_into_page"> Объявления
@@ -1395,6 +1398,26 @@ else{
 </script>
 <div id="news_list2">
 <input type="hidden" name="tag" id="vtag" value="" />
+<div style="width:475px;text-align:left;clear:both;padding-top:12px;margin-bottom:10px;min-height:130px;">
+ <div style="float:left;width:176px;height:130px; overflow:hidden;margin-right:10px; ">
+ <a  href="https://kpfu.ru/itis/s-dnjom-pobedy-465916.html" style="text-decoration:none;color:#4c4c4c;border:none;">
+<img src="/portal/docs/F_98515385/den.pobedy_2.jpg" style="width:169px; height:113px;position:relative;" alt="С Днём Победы! ,ИТИС, программная инженерия, День Победы" title="С Днём Победы! ,ИТИС, программная инженерия, День Победы" />
+</a>
+                        </div>
+<div style="float:left;width:286px; ">
+<a class="vn_new_date"  href="https://kpfu.ru/itis/s-dnjom-pobedy-465916.html" style="display:block;text-decoration:none;color:#4c4c4c;border:none;cursor:pointer;padding-top: 0px;">
+                        09 мая 2025
+                       </a>
+                       <a  href="https://kpfu.ru/itis/s-dnjom-pobedy-465916.html" style="text-decoration:none;color:#4c4c4c;border:none;cursor:pointer;color:#000;font-weight:bold;text-decoration:none;font-size:16px;margin-top:5px;margin-bottom:3px;">
+                        <span style="border-bottom:2px solid #000;color:#000;font-weight:bold;">С Днём Победы!</span> 
+                       </a>
+<div style="width:97%;padding-top:5px;color:#333;font-weight:normal;font-size:15px;" align="justify">Сегодня мы отмечаем 80-летие Победы в Великой Отечественной войне!</div> 
+<div style="width:97%;padding-top:2px;color:#666;font-weight:normal;font-size:13px;padding-top:5px;"> 
+<div class="tag_opa" style="margin-top:5px;margin-bottom:10px;">
+</div>
+ </div>
+</div>
+</div>
 <div style="width:475px;text-align:left;clear:both;padding-top:12px;margin-bottom:10px;min-height:130px;">
  <div style="float:left;width:176px;height:130px; overflow:hidden;margin-right:10px; ">
  <a  href="https://kpfu.ru/itis/39zhuravli-pobedy39-itis-teper-letajut-v-it-parke.html" style="text-decoration:none;color:#4c4c4c;border:none;">
@@ -1511,28 +1534,6 @@ else{
 <div style="width:97%;padding-top:5px;color:#333;font-weight:normal;font-size:15px;" align="justify">Сохраним память о Победе вместе!</div> 
 <div style="width:97%;padding-top:2px;color:#666;font-weight:normal;font-size:13px;padding-top:5px;"> 
 <div class="tag_opa" style="margin-top:5px;margin-bottom:10px;">
-</div>
- </div>
-</div>
-</div>
-<div style="width:475px;text-align:left;clear:both;padding-top:12px;margin-bottom:10px;min-height:130px;">
- <div style="float:left;width:176px;height:130px; overflow:hidden;margin-right:10px; ">
- <a  href="https://kpfu.ru/itis/serebro-po-itogam-festivalya-39studencheskaya.html" style="text-decoration:none;color:#4c4c4c;border:none;">
-<img src="/portal/docs/F146656844/P1188047.JPG" style="width:169px; height:113px;position:relative;" alt="Серебро по итогам фестиваля 'Студенческая весна 2025' у ИТИС! ,ИТИС, программная инженерия, студенческая весна 2025" title="Серебро по итогам фестиваля 'Студенческая весна 2025' у ИТИС! ,ИТИС, программная инженерия, студенческая весна 2025" />
-</a>
-                        </div>
-<div style="float:left;width:286px; ">
-<a class="vn_new_date"  href="https://kpfu.ru/itis/serebro-po-itogam-festivalya-39studencheskaya.html" style="display:block;text-decoration:none;color:#4c4c4c;border:none;cursor:pointer;padding-top: 0px;">
-                        30 апреля 2025
-                       </a>
-                       <a  href="https://kpfu.ru/itis/serebro-po-itogam-festivalya-39studencheskaya.html" style="text-decoration:none;color:#4c4c4c;border:none;cursor:pointer;color:#000;font-weight:bold;text-decoration:none;font-size:16px;margin-top:5px;margin-bottom:3px;">
-                        <span style="border-bottom:2px solid #000;color:#000;font-weight:bold;">Серебро в средней группе институтов по итогам фестиваля "Студенческая весна 2025" у ИТИС!</span> 
-                       </a>
-<div style="width:97%;padding-top:5px;color:#333;font-weight:normal;font-size:15px;" align="justify">Поздравляем творческие коллективы ИТИС</div> 
-<div style="width:97%;padding-top:2px;color:#666;font-weight:normal;font-size:13px;padding-top:5px;"> 
-<div class="tag_opa" style="margin-top:5px;margin-bottom:10px;">
-<a   href="https://kpfu.ru/main_page?p_sub=12&amp;p_id=6"  class="str_num nlink_tag"  style="text-decoration:none;line-height:22px;padding: 2px 2px 2px 2px;color: white; background-color:#8b1740; ">Конкурсы</a>
-<a   href="https://kpfu.ru/main_page?p_sub=12&amp;p_id=3"  class="str_num nlink_tag"  style="text-decoration:none;line-height:22px;padding: 2px 2px 2px 2px;color: white; background-color:#91499a; ">Студенческая жизнь</a>
 </div>
  </div>
 </div>
