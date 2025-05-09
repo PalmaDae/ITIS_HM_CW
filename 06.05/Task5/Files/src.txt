@@ -23,4 +23,5 @@ https://shelly.kpfu.ru/pdf/picture/mainpage_new/loupe.png
 https://shelly.kpfu.ru/pdf/picture/mainpage_new/min_rf2.png
 https://shelly.kpfu.ru/pdf/picture/mainpage_new/min_rt.png
 https://shelly.kpfu.ru/pdf/picture/mainpage_new/5-100.png
-https://shelly.kpfu.ru/pdf/picture/mainpage_new/6++/6+.png
+https://shelly.kpfu.ru/pdf/picture/mainpage_new/6++/6+.png
+https://shelly.kpfu.ru/pdf/picture/mainpage_new/layer_close1.png

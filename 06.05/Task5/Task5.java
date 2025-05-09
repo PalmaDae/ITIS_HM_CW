@@ -35,6 +35,9 @@ public class Task5 {
 				}
 			}
 		}
+		
+		writer.close();
+		reader.close();
 	}
 	
 	public static void parsePictures(String src) throws IOException{
