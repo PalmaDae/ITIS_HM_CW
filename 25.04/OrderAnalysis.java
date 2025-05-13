@@ -116,26 +116,5 @@ public class OrderAnalysis {
 		}
 	}
 	
-	public static void task3(ArrayList<Order> list) {
-		Map<Product, Set<User>> myMap = new HashMap<>();
-		
-		for (Order order : list) {
-			for (Product product : order.products) {
-				Set<User> setOfUsers = myMap.getOrDefault(product, new HashSet<>());
-				
-				setOfUsers.add(order.user);
-				
-				myMap.put(product, setOfUsers);
-			}
-		}
-		
-		for (Map.Entry<Product, Set<User>> entry : myMap.entrySet()) {
-			
-			System.out.println(entry.getKey());
-			
-			for (User user : entry.getValue()) {
-				System.out.println(user);
-			}
-		}
-	}
+
 }
