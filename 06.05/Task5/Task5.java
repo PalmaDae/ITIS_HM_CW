@@ -51,6 +51,15 @@ public class Task5 {
 			httpFromUrl(line, (output + i + ".jpg"));
 			i++;
 		}
+		scanner.close();
+	}
+	
+	public static void picturesInNotepad(String http) throws IOException {
+
+	}
+	
+	public static void parsePictures(String src) throws IOException {
+		
 	}
 	
 	public static void main(String[] args) {
