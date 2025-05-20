@@ -2,24 +2,31 @@ import java.util.*;
 import java.io.*;
 
 public class OrderAnalysis {
-	public static ArrayList<User> listOfUsers() throws IOException{
-		ArrayList<User> list = new ArrayList<User>();
-		Scanner scanner = new Scanner(new File("C:\\Java_Projects\\25.04\\ListOfUsers.txt"));
-		
-		while (scanner.hasNext()) {
-			String line = scanner.nextLine();
-			String[] data = line.split("#");
-			String id = data[0];
-			String name = data[1];
+	public static List<User> listOfUsers = listOfUsers();
+	
+	public static ArrayList<User> listOfUsers() {
+		try {
+			ArrayList<User> list = new ArrayList<User>();
+			Scanner scanner = new Scanner(new File("C:\\Java_Projects\\25.04\\ListOfUsers.txt"));
+			
+			while (scanner.hasNext()) {
+				String line = scanner.nextLine();
+				String[] data = line.split("#");
+				String id = data[0];
+				String name = data[1].trim();
 
-			User user = new User(Integer.parseInt(id), name);
-			list.add(user);
-
+				User user = new User(Integer.parseInt(id), name);
+				list.add(user);
+			}
+			
+			scanner.close();
+			
+			return list;
+		} catch(IOException e) {
+			System.out.println("");
+			
+			return null;
 		}
-		
-		scanner.close();
-		
-		return list;
 	}
 	
 	public static ArrayList<Product> listOfProducts() throws IOException{
@@ -30,7 +37,7 @@ public class OrderAnalysis {
 			String line = scanner.nextLine();
 			String[] data = line.split("#");
 			String id = data[0];
-			String name = data[1];
+			String name = data[1].trim();
 
 			Product product = new Product(Integer.parseInt(id), name);
 			list.add(product);
@@ -42,9 +49,7 @@ public class OrderAnalysis {
 	}
 	
 	public static User returnUser(int id) throws IOException{
-		ArrayList<User> listOfUser = listOfUsers();
-		
-		for (User user : listOfUser) {
+		for (User user : listOfUsers) {
 			if (user.getID() == id) {
 				return user;
 			}
@@ -73,13 +78,13 @@ public class OrderAnalysis {
 		ArrayList<Order> list = new ArrayList<Order>();
 		ArrayList<User> listOfUser = listOfUsers();
 		Scanner scanner = new Scanner(new File("C:\\Java_Projects\\25.04\\ListOfOrders.txt")); 
-			
+		
 		while (scanner.hasNext()) {
 			String line = scanner.nextLine();
 			String[] data = line.split("#");
 			String id = data[0];
-			String userId = data[1];
-			String products = data[2];
+			String userId = data[1].trim();
+			String products = data[2].trim();
 
 			Order product = new Order(Integer.parseInt(id), returnUser(Integer.parseInt(id)), returnProducts(products));
 			list.add(product);
@@ -116,5 +121,14 @@ public class OrderAnalysis {
 		}
 	}
 	
-
+	public static void task3(ArrayList<Order> list) {
+		Map<Product, Set<User>> myMap = new HashMap<Product, Set<User>>();
+		
+		for (Order order : list) {
+			for (Product product : order.products) {
+				Set<User> setOfUsers = new HashSet<User>();
+				setOfUsers.add(order.user);
+			}
+		}
+	}
 }

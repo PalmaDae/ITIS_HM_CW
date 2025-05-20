@@ -16,8 +16,12 @@ public class MyRunner {
 			
 			System.out.println('\n');
 			
-			System.out.println("Third Task");
-			OrderAnalysis.task3(list);
+			for (Order order : list) {
+				System.out.println(order);
+			}
+			
+			// System.out.println("Third Task");
+			// OrderAnalysis.task3(list);
 		} catch(IOException e) {
 			System.out.println("");
 		}

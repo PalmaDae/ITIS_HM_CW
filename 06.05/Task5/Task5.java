@@ -1,6 +1,7 @@
 import java.io.*;
 import java.net.*;
 import java.util.*;
+import java.util.regex.*;
 
 public class Task5 {
 	@SuppressWarnings("deprecation")
@@ -24,15 +25,29 @@ public class Task5 {
 		
 		String line;
 		
+		// String regex = "<img\b[^>]*?\bsrc\s*=\s*([\"'])(.*?)\1";
+		
+		String regex = "src=\\\"[^\"]+\\\"";
+		
+		
+		Pattern pattern = Pattern.compile(regex);
+		
 		while((line = reader.readLine()) != null) {
 			line = line.toLowerCase();
-			if (line.contains("<img") && line.contains("https") && (line.contains(".jpg") || line.contains(".png"))) {
+			
+			Matcher matcher = pattern.matcher(line);
+			
+			if (matcher.find()) {
 				
-				String[] data = line.split("src=\"");
-				for (int i = 1; i < data.length; i++) {
-					String src = data[i].split("\"")[0];
-					writer.println(src);
-				}
+				//&& line.contains("https")
+				
+				// String[] data = line.split("src=\"");
+				// for (int i = 1; i < data.length; i++) {
+					// String src = data[i].split("\"")[0];
+					// writer.println(src);
+				// }
+				
+				writer.println(matcher.group());
 			}
 		}
 		
@@ -48,18 +63,10 @@ public class Task5 {
 		
 		while (scanner.hasNextLine()) {
 			String line = scanner.nextLine();
-			httpFromUrl(line, (output + i + ".jpg"));
+			httpFromUrl(line, (output + i + "."));
 			i++;
 		}
 		scanner.close();
-	}
-	
-	public static void picturesInNotepad(String http) throws IOException {
-
-	}
-	
-	public static void parsePictures(String src) throws IOException {
-		
 	}
 	
 	public static void main(String[] args) {

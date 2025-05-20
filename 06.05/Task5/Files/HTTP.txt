@@ -921,15 +921,6 @@ if (!value.match(reg)) { return false; }
  
       <li style="font-family:Myriad Pro, 'Arial Regular', Arial   sans-serif;width:962px;height:262px;">
          <div style=" height:262px;width:962px;">
-<img src="https://kpfu.ru//portal/docs/F386896188/den_pobedy_2.1.png" alt="С Днём Победы!" title="С Днём Победы!" style=" height:262px;width:962px;"  />
-</div>
-<div  style="position:relative;height:262px;width:600px;left:373px;z-index:10;"> 
- <a href="https://kpfu.ru/main_page?p_cid=465916&amp;p_random=477" target="_blank" style="margin: 0px 50px 20px 35px ;position:relative;top:-65px;background-image: url(https://shelly.kpfu.ru/pdf/picture/mainpage_new/more2.png);width:170px;background-repeat:no-repeat;height:35px;display:block;"></a>
-</div>
-</li>
- 
-      <li style="font-family:Myriad Pro, 'Arial Regular', Arial   sans-serif;width:962px;height:262px;">
-         <div style=" height:262px;width:962px;">
 <img src="https://kpfu.ru//portal/docs/F644987406/17_MAYa_2__1___1_.jpg" alt="Портал КФУ \ Образование \ Институт информационных технологий и интеллектуальных систем" title="Портал КФУ \ Образование \ Институт информационных технологий и интеллектуальных систем" style=" height:262px;width:962px;"  />
 </div>
 <div  style="position:relative;height:262px;width:600px;left:373px;z-index:10;"> 
@@ -1240,6 +1231,9 @@ function openphoto(vid){
 }
   </script>
 <ul id="jcarousel"  class="jcarousel-skin-tango" style="height:113px;overflow:hidden;position:relative;left:20px;">
+<li onclick="alert_faculty(466434);"><img src="/portal/docs/F1529941841/IMG_20250507_154213_077.jpg" style=" height:96px;border:none;" alt="Аспирант ИТИС изучает инструменты определения поз человека на мобильных устройствах для реабилитации спортсменов ,ИТИС, программная инженерия, AR, VR, iOS, Android, индустрия разработки видеоигр" title="Аспирант ИТИС изучает инструменты определения поз человека на мобильных устройствах для реабилитации спортсменов ,ИТИС, программная инженерия, AR, VR, iOS, Android, индустрия разработки видеоигр" /></li>
+<li onclick="alert_faculty(466469);"><img src="/portal/docs/F_1310419428/5258037764677562079.jpg" style=" height:96px;border:none;" alt="Голоса студентов ИТИС прозвучали на гала-концерте Дня Победы ,ИТИС, программная инженерия, День Победы, Поющая Казань" title="Голоса студентов ИТИС прозвучали на гала-концерте Дня Победы ,ИТИС, программная инженерия, День Победы, Поющая Казань" /></li>
+<li onclick="alert_faculty(466468);"><img src="/portal/docs/F_604264282/DSC03080.JPG" style=" height:96px;border:none;" alt="Студенты и сотрудники ИТИС присоединились к Всероссийской акции 'Бессмертный полк' ,ИТИС, программная инженерия, &laquo;Бессмертный полк&raquo;, День Победы" title="Студенты и сотрудники ИТИС присоединились к Всероссийской акции 'Бессмертный полк' ,ИТИС, программная инженерия, &laquo;Бессмертный полк&raquo;, День Победы" /></li>
 <li onclick="alert_faculty(465916);"><img src="/portal/docs/F_98515385/den.pobedy_2.jpg" style=" height:96px;border:none;" alt="С Днём Победы! ,ИТИС, программная инженерия, День Победы" title="С Днём Победы! ,ИТИС, программная инженерия, День Победы" /></li>
 <li onclick="alert_faculty(466443);"><img src="/portal/docs/F_1545745205/P1188388.JPG" style=" height:96px;border:none;" alt="'Журавли Победы' ИТИС теперь летают в ИТ-парке имени Башира Рамеева ,ИТИС, программная инженерия, День радио и связи, 80-летие Великой Победы" title="'Журавли Победы' ИТИС теперь летают в ИТ-парке имени Башира Рамеева ,ИТИС, программная инженерия, День радио и связи, 80-летие Великой Победы" /></li>
 <li onclick="alert_faculty(465914);"><img src="/portal/docs/F_176133123/VOV_mashiny._2_.jpg" style=" height:96px;border:none;" alt="Шифровальные машины СССР в годы Великой Отечественной войны ,ИТИС, программная инженерия, криптография, ВОВ, шифровальная машина" title="Шифровальные машины СССР в годы Великой Отечественной войны ,ИТИС, программная инженерия, криптография, ВОВ, шифровальная машина" /></li>
@@ -1287,9 +1281,6 @@ function openphoto(vid){
 <li onclick="alert_faculty(464233);"><img src="/portal/docs/F1929042206/DSC_19.jpg" style=" height:96px;border:none;" alt="Искусственный интеллект поможет работодателям подбирать сотрудников ,ИТИС, программная инженерия, Проектная деятельность школьных IT-команд, X Всероссийская научная конференция учащихся им. Н.И. Лобачевского" title="Искусственный интеллект поможет работодателям подбирать сотрудников ,ИТИС, программная инженерия, Проектная деятельность школьных IT-команд, X Всероссийская научная конференция учащихся им. Н.И. Лобачевского" /></li>
 <li onclick="alert_faculty(464319);"><img src="/portal/docs/F_1663003965/5429462858787318399.jpg" style=" height:96px;border:none;" alt="В ИТИС провели просветительский проект со студентами первого курса ,ИТИС, программная инженерия" title="В ИТИС провели просветительский проект со студентами первого курса ,ИТИС, программная инженерия" /></li>
 <li onclick="alert_faculty(463780);"><img src="/portal/docs/F2124429277/doc_2025_03_27_15_07_01.jpg" style=" height:96px;border:none;" alt="Сотрудники Лаборатории интеллектуальных робототехнических систем приняли участие в круглом столе РГГУ ,ИТИС, ЛИРС, робототехника" title="Сотрудники Лаборатории интеллектуальных робототехнических систем приняли участие в круглом столе РГГУ ,ИТИС, ЛИРС, робототехника" /></li>
-<li onclick="alert_faculty(463681);"><img src="/portal/docs/F_1271520904/5413378081709746158.jpg" style=" height:96px;border:none;" alt="Студенты ИТИС приняли участие в открытой встрече Айрата Хайруллина с представителями ИТ-компаний РТ ,ИТИС, программная инженерия, министр цифрового развития, минцифра РТ" title="Студенты ИТИС приняли участие в открытой встрече Айрата Хайруллина с представителями ИТ-компаний РТ ,ИТИС, программная инженерия, министр цифрового развития, минцифра РТ" /></li>
-<li onclick="alert_faculty(463441);"><img src="/portal/docs/F203414279/5398026245096205754.jpg" style=" height:96px;border:none;" alt="ИТИС и представительство Samsung Electronics в странах СНГ рассматривают дополнительные направления сотрудничества. ,ИТИС, программная инженерия" title="ИТИС и представительство Samsung Electronics в странах СНГ рассматривают дополнительные направления сотрудничества. ,ИТИС, программная инженерия" /></li>
-<li onclick="alert_faculty(463400);"><img src="/portal/docs/F_1689323607/5399885630927924736_oblozhka.jpg" style=" height:96px;border:none;" alt="О преимуществах высшего образования с практическим опытом ,ИТИС, программная инженерия" title="О преимуществах высшего образования с практическим опытом ,ИТИС, программная инженерия" /></li>
 </ul>
 </div>
 <div style="clear:both;float:left;width:485px;" class="header_into_page"> Объявления
@@ -1400,6 +1391,67 @@ else{
 <input type="hidden" name="tag" id="vtag" value="" />
 <div style="width:475px;text-align:left;clear:both;padding-top:12px;margin-bottom:10px;min-height:130px;">
  <div style="float:left;width:176px;height:130px; overflow:hidden;margin-right:10px; ">
+ <a  href="https://kpfu.ru/itis/aspirant-itis-izuchaet-instrumenty-opredeleniya.html" style="text-decoration:none;color:#4c4c4c;border:none;">
+<img src="/portal/docs/F1529941841/IMG_20250507_154213_077.jpg" style="width:169px; height:113px;position:relative;" alt="Аспирант ИТИС изучает инструменты определения поз человека на мобильных устройствах для реабилитации спортсменов ,ИТИС, программная инженерия, AR, VR, iOS, Android, индустрия разработки видеоигр" title="Аспирант ИТИС изучает инструменты определения поз человека на мобильных устройствах для реабилитации спортсменов ,ИТИС, программная инженерия, AR, VR, iOS, Android, индустрия разработки видеоигр" />
+</a>
+                        </div>
+<div style="float:left;width:286px; ">
+<a class="vn_new_date"  href="https://kpfu.ru/itis/aspirant-itis-izuchaet-instrumenty-opredeleniya.html" style="display:block;text-decoration:none;color:#4c4c4c;border:none;cursor:pointer;padding-top: 0px;">
+                        13 мая 2025
+                       </a>
+                       <a  href="https://kpfu.ru/itis/aspirant-itis-izuchaet-instrumenty-opredeleniya.html" style="text-decoration:none;color:#4c4c4c;border:none;cursor:pointer;color:#000;font-weight:bold;text-decoration:none;font-size:16px;margin-top:5px;margin-bottom:3px;">
+                        <span style="border-bottom:2px solid #000;color:#000;font-weight:bold;">Аспирант ИТИС изучает инструменты определения поз человека на мобильных устройствах для реабилитации спортсменов</span> 
+                       </a>
+<div style="width:97%;padding-top:5px;color:#333;font-weight:normal;font-size:15px;" align="justify">Егор Ярко выступил на научно-практической конференции &laquo;Технологии дополненной и виртуальной реальности&raquo; в МГТУ им. Н.Э. Баумана</div> 
+<div style="width:97%;padding-top:2px;color:#666;font-weight:normal;font-size:13px;padding-top:5px;"> 
+<div class="tag_opa" style="margin-top:5px;margin-bottom:10px;">
+<a   href="https://kpfu.ru/main_page?p_sub=12&amp;p_id=2"  class="str_num nlink_tag"  style="text-decoration:none;line-height:22px;padding: 2px 2px 2px 2px;color: white; background-color:#008f9c; ">Наука</a>
+</div>
+ </div>
+</div>
+</div>
+<div style="width:475px;text-align:left;clear:both;padding-top:12px;margin-bottom:10px;min-height:130px;">
+ <div style="float:left;width:176px;height:130px; overflow:hidden;margin-right:10px; ">
+ <a  href="https://kpfu.ru/itis/golosa-studentov-itis-prozvuchali-na-gala-466469.html" style="text-decoration:none;color:#4c4c4c;border:none;">
+<img src="/portal/docs/F_1310419428/5258037764677562079.jpg" style="width:169px; height:113px;position:relative;" alt="Голоса студентов ИТИС прозвучали на гала-концерте Дня Победы ,ИТИС, программная инженерия, День Победы, Поющая Казань" title="Голоса студентов ИТИС прозвучали на гала-концерте Дня Победы ,ИТИС, программная инженерия, День Победы, Поющая Казань" />
+</a>
+                        </div>
+<div style="float:left;width:286px; ">
+<a class="vn_new_date"  href="https://kpfu.ru/itis/golosa-studentov-itis-prozvuchali-na-gala-466469.html" style="display:block;text-decoration:none;color:#4c4c4c;border:none;cursor:pointer;padding-top: 0px;">
+                        11 мая 2025
+                       </a>
+                       <a  href="https://kpfu.ru/itis/golosa-studentov-itis-prozvuchali-na-gala-466469.html" style="text-decoration:none;color:#4c4c4c;border:none;cursor:pointer;color:#000;font-weight:bold;text-decoration:none;font-size:16px;margin-top:5px;margin-bottom:3px;">
+                        <span style="border-bottom:2px solid #000;color:#000;font-weight:bold;">Голоса студентов ИТИС прозвучали на гала-концерте Дня Победы</span> 
+                       </a>
+<div style="width:97%;padding-top:5px;color:#333;font-weight:normal;font-size:15px;" align="justify">В составе тысячного хора &laquo;Поющая Казань&raquo; они исполнили песни военных лет и праздничные композиции</div> 
+<div style="width:97%;padding-top:2px;color:#666;font-weight:normal;font-size:13px;padding-top:5px;"> 
+<div class="tag_opa" style="margin-top:5px;margin-bottom:10px;">
+</div>
+ </div>
+</div>
+</div>
+<div style="width:475px;text-align:left;clear:both;padding-top:12px;margin-bottom:10px;min-height:130px;">
+ <div style="float:left;width:176px;height:130px; overflow:hidden;margin-right:10px; ">
+ <a  href="https://kpfu.ru/itis/studenty-i-sotrudniki-itis-prisoedinilis-k-466468.html" style="text-decoration:none;color:#4c4c4c;border:none;">
+<img src="/portal/docs/F_604264282/DSC03080.JPG" style="width:169px; height:113px;position:relative;" alt="Студенты и сотрудники ИТИС присоединились к Всероссийской акции 'Бессмертный полк' ,ИТИС, программная инженерия, &laquo;Бессмертный полк&raquo;, День Победы" title="Студенты и сотрудники ИТИС присоединились к Всероссийской акции 'Бессмертный полк' ,ИТИС, программная инженерия, &laquo;Бессмертный полк&raquo;, День Победы" />
+</a>
+                        </div>
+<div style="float:left;width:286px; ">
+<a class="vn_new_date"  href="https://kpfu.ru/itis/studenty-i-sotrudniki-itis-prisoedinilis-k-466468.html" style="display:block;text-decoration:none;color:#4c4c4c;border:none;cursor:pointer;padding-top: 0px;">
+                        11 мая 2025
+                       </a>
+                       <a  href="https://kpfu.ru/itis/studenty-i-sotrudniki-itis-prisoedinilis-k-466468.html" style="text-decoration:none;color:#4c4c4c;border:none;cursor:pointer;color:#000;font-weight:bold;text-decoration:none;font-size:16px;margin-top:5px;margin-bottom:3px;">
+                        <span style="border-bottom:2px solid #000;color:#000;font-weight:bold;">Студенты и сотрудники ИТИС присоединились к Всероссийской акции "Бессмертный полк"</span> 
+                       </a>
+<div style="width:97%;padding-top:5px;color:#333;font-weight:normal;font-size:15px;" align="justify">Они рассказали нам истории своих семей</div> 
+<div style="width:97%;padding-top:2px;color:#666;font-weight:normal;font-size:13px;padding-top:5px;"> 
+<div class="tag_opa" style="margin-top:5px;margin-bottom:10px;">
+</div>
+ </div>
+</div>
+</div>
+<div style="width:475px;text-align:left;clear:both;padding-top:12px;margin-bottom:10px;min-height:130px;">
+ <div style="float:left;width:176px;height:130px; overflow:hidden;margin-right:10px; ">
  <a  href="https://kpfu.ru/itis/s-dnjom-pobedy-465916.html" style="text-decoration:none;color:#4c4c4c;border:none;">
 <img src="/portal/docs/F_98515385/den.pobedy_2.jpg" style="width:169px; height:113px;position:relative;" alt="С Днём Победы! ,ИТИС, программная инженерия, День Победы" title="С Днём Победы! ,ИТИС, программная инженерия, День Победы" />
 </a>
@@ -1472,66 +1524,6 @@ else{
                         <span style="border-bottom:2px solid #000;color:#000;font-weight:bold;">Какая марка автомобилей участвовала в автопробеге, посвящённом победе в Великой Отечественной войне в 1995 году?</span> 
                        </a>
 <div style="width:97%;padding-top:5px;color:#333;font-weight:normal;font-size:15px;" align="justify">Студенты ИТИС провели интеллектуальный квиз &#39;Что? Где? Когда?&#39;, приуроченный к празднованию 80-летия победы в Великой Отечественной войне</div> 
-<div style="width:97%;padding-top:2px;color:#666;font-weight:normal;font-size:13px;padding-top:5px;"> 
-<div class="tag_opa" style="margin-top:5px;margin-bottom:10px;">
-</div>
- </div>
-</div>
-</div>
-<div style="width:475px;text-align:left;clear:both;padding-top:12px;margin-bottom:10px;min-height:130px;">
- <div style="float:left;width:176px;height:130px; overflow:hidden;margin-right:10px; ">
- <a  href="https://kpfu.ru/itis/studenty-itis-prinyali-uchastie-v-desyatom-466377.html" style="text-decoration:none;color:#4c4c4c;border:none;">
-<img src="/portal/docs/F_178036125/P1188196.JPG" style="width:169px; height:113px;position:relative;" alt="Студенты ИТИС приняли участие в десятом юбилейном студенческом марше Победы КФУ ,ИТИС, программная инженерия, День Победы, марш Победы" title="Студенты ИТИС приняли участие в десятом юбилейном студенческом марше Победы КФУ ,ИТИС, программная инженерия, День Победы, марш Победы" />
-</a>
-                        </div>
-<div style="float:left;width:286px; ">
-<a class="vn_new_date"  href="https://kpfu.ru/itis/studenty-itis-prinyali-uchastie-v-desyatom-466377.html" style="display:block;text-decoration:none;color:#4c4c4c;border:none;cursor:pointer;padding-top: 0px;">
-                        07 мая 2025
-                       </a>
-                       <a  href="https://kpfu.ru/itis/studenty-itis-prinyali-uchastie-v-desyatom-466377.html" style="text-decoration:none;color:#4c4c4c;border:none;cursor:pointer;color:#000;font-weight:bold;text-decoration:none;font-size:16px;margin-top:5px;margin-bottom:3px;">
-                        <span style="border-bottom:2px solid #000;color:#000;font-weight:bold;">Студенты ИТИС приняли участие в десятом юбилейном студенческом марше Победы КФУ</span> 
-                       </a>
-<div style="width:97%;padding-top:5px;color:#333;font-weight:normal;font-size:15px;" align="justify">Минувшим днём в ректорском дворике Казанского федерального университета состоялось торжественное мероприятие, посвященное 80-летию Победы в ВОВ</div> 
-<div style="width:97%;padding-top:2px;color:#666;font-weight:normal;font-size:13px;padding-top:5px;"> 
-<div class="tag_opa" style="margin-top:5px;margin-bottom:10px;">
-</div>
- </div>
-</div>
-</div>
-<div style="width:475px;text-align:left;clear:both;padding-top:12px;margin-bottom:10px;min-height:130px;">
- <div style="float:left;width:176px;height:130px; overflow:hidden;margin-right:10px; ">
- <a  href="https://kpfu.ru/itis/direktor-itis-mihail-abramskij-rasskazal-v-466302.html" style="text-decoration:none;color:#4c4c4c;border:none;">
-<img src="/portal/docs/F_1126261074/IMG_4304_sajt.jpg" style="width:169px; height:113px;position:relative;" alt="Директор ИТИС Михаил Абрамский рассказал в открытой майской студии 'Наша Победа' о своей семье в годы ВОВ ,ИТИС, программная инженерия, ВОВ, День Победы,Наша Победа" title="Директор ИТИС Михаил Абрамский рассказал в открытой майской студии 'Наша Победа' о своей семье в годы ВОВ ,ИТИС, программная инженерия, ВОВ, День Победы,Наша Победа" />
-</a>
-                        </div>
-<div style="float:left;width:286px; ">
-<a class="vn_new_date"  href="https://kpfu.ru/itis/direktor-itis-mihail-abramskij-rasskazal-v-466302.html" style="display:block;text-decoration:none;color:#4c4c4c;border:none;cursor:pointer;padding-top: 0px;">
-                        06 мая 2025
-                       </a>
-                       <a  href="https://kpfu.ru/itis/direktor-itis-mihail-abramskij-rasskazal-v-466302.html" style="text-decoration:none;color:#4c4c4c;border:none;cursor:pointer;color:#000;font-weight:bold;text-decoration:none;font-size:16px;margin-top:5px;margin-bottom:3px;">
-                        <span style="border-bottom:2px solid #000;color:#000;font-weight:bold;">Директор ИТИС Михаил Абрамский рассказал в открытой майской студии "Наша Победа" о своей семье в годы ВОВ</span> 
-                       </a>
-<div style="width:97%;padding-top:5px;color:#333;font-weight:normal;font-size:15px;" align="justify">Накануне КФУ и телеканал UNIVER TV обустроили уличную студию для съемок проекта, посвященного 80-летию Победы в Великой Отечественной войне</div> 
-<div style="width:97%;padding-top:2px;color:#666;font-weight:normal;font-size:13px;padding-top:5px;"> 
-<div class="tag_opa" style="margin-top:5px;margin-bottom:10px;">
-</div>
- </div>
-</div>
-</div>
-<div style="width:475px;text-align:left;clear:both;padding-top:12px;margin-bottom:10px;min-height:130px;">
- <div style="float:left;width:176px;height:130px; overflow:hidden;margin-right:10px; ">
- <a  href="https://kpfu.ru/itis/studenty-itis-proveli-akciju-39georgievskaya.html" style="text-decoration:none;color:#4c4c4c;border:none;">
-<img src="/portal/docs/F800157343/P1188134.JPG" style="width:169px; height:113px;position:relative;" alt="Студенты ИТИС провели акцию 'Георгиевская ленточка' в стенах КФУ ,ИТИС, программная инженерия, День Победы, &laquo;Георгиевская ленточка&raquo;" title="Студенты ИТИС провели акцию 'Георгиевская ленточка' в стенах КФУ ,ИТИС, программная инженерия, День Победы, &laquo;Георгиевская ленточка&raquo;" />
-</a>
-                        </div>
-<div style="float:left;width:286px; ">
-<a class="vn_new_date"  href="https://kpfu.ru/itis/studenty-itis-proveli-akciju-39georgievskaya.html" style="display:block;text-decoration:none;color:#4c4c4c;border:none;cursor:pointer;padding-top: 0px;">
-                        05 мая 2025
-                       </a>
-                       <a  href="https://kpfu.ru/itis/studenty-itis-proveli-akciju-39georgievskaya.html" style="text-decoration:none;color:#4c4c4c;border:none;cursor:pointer;color:#000;font-weight:bold;text-decoration:none;font-size:16px;margin-top:5px;margin-bottom:3px;">
-                        <span style="border-bottom:2px solid #000;color:#000;font-weight:bold;">Студенты ИТИС провели акцию "Георгиевская ленточка" в стенах КФУ</span> 
-                       </a>
-<div style="width:97%;padding-top:5px;color:#333;font-weight:normal;font-size:15px;" align="justify">Сохраним память о Победе вместе!</div> 
 <div style="width:97%;padding-top:2px;color:#666;font-weight:normal;font-size:13px;padding-top:5px;"> 
 <div class="tag_opa" style="margin-top:5px;margin-bottom:10px;">
 </div>

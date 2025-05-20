@@ -10,4 +10,9 @@ public class Order {
 		this.user = user;
 		this.products = products;
 	}
+	
+	@Override
+	public String toString() {
+		return this.user.name;
+	}
 }
