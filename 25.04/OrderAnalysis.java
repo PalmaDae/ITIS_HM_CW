@@ -121,14 +121,14 @@ public class OrderAnalysis {
 		}
 	}
 	
-	public static void task3(ArrayList<Order> list) {
-		Map<Product, Set<User>> myMap = new HashMap<Product, Set<User>>();
+	// public static void task3(ArrayList<Order> list) {
+		// Map<Product, Set<User>> myMap = new HashMap<Product, Set<User>>();
 		
-		for (Order order : list) {
-			for (Product product : order.products) {
-				Set<User> setOfUsers = new HashSet<User>();
-				setOfUsers.add(order.user);
-			}
-		}
-	}
+		// for (Order order : list) {
+			// for (Product product : order.products) {
+				// Set<User> setOfUsers = new HashSet<User>();
+				// setOfUsers.add(order.user);
+			// }
+		// }
+	// }
 }
