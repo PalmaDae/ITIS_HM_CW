@@ -5,15 +5,16 @@ public class Task1 {
 	public static ArrayList<int[]> taskSolver(ArrayList<int[]> list) {
 		ArrayList<int[]> result = new ArrayList<>();
 		
-		// result.add(list.get(0));
-		
-		// int index = 0;
+		//Тут должна быть сортировка по второму элементу массива списка
 		
 		result.add(list.get(0));
 		
+		int last = result.get(0)[1];
+		
 		for (int i = 0; i < list.size(); i++) {
-			if (list.get(i)[0] > result.get(i)[1]) {
+			if (list.get(i)[0] > last) {
 				result.add(list.get(i));
+				last = list.get(i)[1];
 			}
 		}
 		
