@@ -1,0 +1,21 @@
+﻿WhatsApp,4,3
+VPN,10,7
+X,1,1
+Email,10,6
+Pinterest,5,4
+Instagram,7,5
+Duolingo,5,4
+Yandex,1,2
+Telegram,10,6
+ClashRoyale,8,8
+TikTok,1,4
+YouTube,7,7
+Vkontakte,3,3
+Bank,7,4
+Ozon,5,3
+Wildberries,1,2
+DeepSeek,10,8
+Заметки,8,5
+Госуслуги,6,4
+Яндекс Карты,9,6
+Музыка,8,6

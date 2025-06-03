@@ -2,12 +2,11 @@ import java.util.*;
 import java.io.*;
 import java.util.stream.*;
 
-public class Task1 {
-	@SuppressWarnings("unchecked")
+public class Task2 {
 	public static ArrayList<int[]> taskSolver(ArrayList<int[]> list) {
 		ArrayList<int[]> result = new ArrayList<>();
 		
-		list.stream().map(s -> s[1]).sorted().collect(Collectors.toList());
+		list.stream().map(s -> s[0]).sorted().collect(Collectors.toList());
 		
 		result.add(list.get(0));
 		
@@ -23,16 +22,13 @@ public class Task1 {
 		return result;
 	}
 	
-	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
 		ArrayList<int[]> list = new ArrayList<>();
-			list.add(new int[]{1,4});
-			list.add(new int[]{3,5});
-			list.add(new int[]{0,6});
-			list.add(new int[]{5,7});
-			list.add(new int[]{8,9});
+			list.add(new int[]{0,5});
+			list.add(new int[]{3,6});
 			list.add(new int[]{5,9});
-		
+			list.add(new int[]{6,8});
+			list.add(new int[]{8,10});
 		
 		ArrayList<int[]> result = taskSolver(list);
 		

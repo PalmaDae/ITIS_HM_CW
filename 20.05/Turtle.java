@@ -1,4 +1,6 @@
 public class Turtle {
+	
+	
 	public static int turtle(int[][] grid) {
 		int length = grid.length;
 		
@@ -10,7 +12,6 @@ public class Turtle {
 					coins[i][j] = grid[i][j];
 				} else if (i == 0) {
 					coins[i][j] = coins[i][j-1] + grid[i][j];
-					
 				} else if (j == 0) {
 					coins[i][j] = coins[i-1][j] + grid[i][j];
 				} else {
