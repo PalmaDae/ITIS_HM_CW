@@ -5,7 +5,7 @@ import java.util.*;
 import database.*;
 
 public class MessageDAO {
-	public static List<String> listOfMessages = getMessages();
+	public static List<Message> listOfMessages = getMessages();
 	
 	public static List<Message> getMessages() {
 		List<Message> list = new ArrayList<>();

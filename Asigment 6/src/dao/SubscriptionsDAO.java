@@ -24,8 +24,8 @@ public class SubscriptionsDAO {
 	}
 	
 	public static boolean isFollow(String who, String onWhom) {
-		for (Subscriptions sub : getSubs()) {
-			if (sub.getWho().equals(who) && sub.getOnWhom().equals(onWhom)) {
+		for (Subscriptions sub : listOfSubs) {
+			if (sub.getWho().getID().equals(who) && sub.getOnWhom().getID().equals(onWhom)) {
 				return true;
 			}
 		}
@@ -46,6 +46,7 @@ public class SubscriptionsDAO {
 
 		for (int i = 0; i < users.size(); i++) {
 			User userA = users.get(i);
+			
 			for (int j = i + 1; j < users.size(); j++) {
 				User userB = users.get(j);
 

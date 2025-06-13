@@ -5,7 +5,7 @@ import java.util.*;
 import database.*;
 
 public class GroupDAO {
-	public static List<String> listOfGroups = getGroups();
+	public static List<Group> listOfGroups = getGroups();
 	
 	public static List<Group> getGroups() {
 		List<Group> list = new ArrayList<>();
@@ -24,7 +24,7 @@ public class GroupDAO {
 		return list;
 	}
 	
-	public Group returnGroup(String id) {
+	public static Group returnGroup(String id) {
 		for (Group group : getGroups()) {
 			if (group.getId().equals(id)) {
 				return group;

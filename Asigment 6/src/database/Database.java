@@ -24,7 +24,7 @@ public class Database {
 	
 	private static List<String> loadUsers() throws IOException {
 		List<String> list = new ArrayList<>();
-		Scanner scanner = new Scanner(new File("C:\\Java_Projects\\25.04.Infa\\data\\Users.txt"));
+		Scanner scanner = new Scanner(new File("C:\\Java_Projects\\Asigment 6\\data\\Users.txt"));
 
 		while (scanner.hasNextLine()) {
 			String line = scanner.nextLine();
@@ -36,7 +36,7 @@ public class Database {
 
 	private static List<String> loadSubscriptions() throws IOException {
 		List<String> list = new ArrayList<>();
-		Scanner scanner = new Scanner(new File("C:\\Java_Projects\\25.04.Infa\\data\\SubscribeId.txt"));
+		Scanner scanner = new Scanner(new File("C:\\Java_Projects\\Asigment 6\\data\\SubscribeId.txt"));
 
 		while (scanner.hasNextLine()) {
 			String line = scanner.nextLine();
@@ -48,7 +48,7 @@ public class Database {
 
 	private static List<String> loadGroups() throws IOException {
 		List<String> list = new ArrayList<>();
-		Scanner scanner = new Scanner(new File("C:\\Java_Projects\\25.04.Infa\\data\\Groups.txt"));
+		Scanner scanner = new Scanner(new File("C:\\Java_Projects\\Asigment 6\\data\\Groups.txt"));
 
 		while (scanner.hasNextLine()) {
 			String line = scanner.nextLine();
@@ -60,7 +60,7 @@ public class Database {
 
 	private static List<String> loadMessages() throws IOException {
 		List<String> list = new ArrayList<>();
-		Scanner scanner = new Scanner(new File("C:\\Java_Projects\\25.04.Infa\\data\\Messages.txt"));
+		Scanner scanner = new Scanner(new File("C:\\Java_Projects\\Asigment 6\\data\\Messages.txt"));
 
 		while (scanner.hasNextLine()) {
 			String line = scanner.nextLine();
@@ -72,7 +72,7 @@ public class Database {
 
 	private static List<String> loadMembers() throws IOException {
 		List<String> list = new ArrayList<>();
-		Scanner scanner = new Scanner(new File("C:\\Java_Projects\\25.04.Infa\\data\\Member.txt"));
+		Scanner scanner = new Scanner(new File("C:\\Java_Projects\\Asigment 6\\data\\Member.txt"));
 
 		while (scanner.hasNextLine()) {
 			String line = scanner.nextLine();

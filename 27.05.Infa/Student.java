@@ -4,7 +4,7 @@ public class Student {
 	public int age;
 	public boolean ready;
 	
-
+ 
 	
 	public Student(String name, int age, boolean ready) {
 		this.name = name;

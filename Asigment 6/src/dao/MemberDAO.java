@@ -23,7 +23,7 @@ public class MemberDAO {
 		return list;
 	}
 	
-	private static Map<Group, Integer> countGroupMembers() {
+	public static Map<Group, Integer> countGroupMembers() {
 		Map<Group, Integer> groupCount = new HashMap<>();
 		
 		for (Member member : listOfMembers) {
