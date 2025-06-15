@@ -96,9 +96,33 @@ public class Runner {
             }
         }
 
-        for (String[] bom : newField) {
-            System.out.println(Arrays.toString(bom));
+        System.out.print("   ");
+        for (int j = 0; j < game.column; j++) {
+            System.out.print(j + " ");
         }
+        System.out.println();
+
+        for (int i = 0; i < game.row; i++) {
+            System.out.print(i + "  ");
+            for (int j = 0; j < game.column; j++) {
+                System.out.print(newField[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static boolean gameWin(Game game) {
+        for (int i = 0; i < game.row; i++) {
+            for (int j = 0; j < game.column; j++) {
+                if (game.field[i][j] == -2) {
+                    return false;
+                }
+            }
+        }
+
+        System.out.println("You Win!!!");
+
+        return true;
     }
 
     public static void changeCell(Game game, int x, int y) {
@@ -207,10 +231,12 @@ public class Runner {
         0-8 - сколько мин рядом
      **/
 
+
+
     public static void gameplay(Game game, int bombs) {
         printField(game);
 
-        while (!gameOver) {
+        while (!gameOver && !gameWin(game)) {
             //Данные пользователя
             int[] data = userData(game.row, game.column);
             System.out.println("Ход: " + turn);
